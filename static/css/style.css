@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700;800&display=swap');
+
 .callout-container {
     height: 66vh;
 
@@ -34,4 +36,11 @@ nav ul a {
     font-weight: 500;
     letter-spacing: 1px;
     text-transform: uppercase;
+}
+
+#callout-header {
+    font-size: 35px;
+    font-family: 'Martel', sans-serif;
+    font-weight: 600;
+    color: #344c5c;
 }
