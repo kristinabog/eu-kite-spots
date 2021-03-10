@@ -9,9 +9,30 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     {% block styles %}
     {% endblock %}
-    <title>Task Manager</title>
+    <title>Kitesurf spots in Europe</title>
 </head>
 <body>
+
+    <header>
+        <nav class="nav-extended white">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo"><img id="logo" src="../static/img/logo.png"></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Kitesurf Spots</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Log In</a></li>
+                    <li><a href="#">Sign up</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="callout-container">
+            <div class="opaque-overlay">&nbsp;</div>
+        </div>
+
+    
+    </header
     {% block content %}
     {% endblock %}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
