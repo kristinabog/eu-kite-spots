@@ -1,11 +1,8 @@
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kitespots</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
+
+    <h2>Testing</h2>
+
     {% for spot in spots %}
         {{ spot.spot_name }}<br>
         {{ spot.spot_region }}<br>
@@ -13,5 +10,5 @@
         {{ spot.spot_best_time }}<br>
         {{ spot.spot_image }}<br>
     {% endfor %}
-</body>
-</html>
+
+{% endblock %}
