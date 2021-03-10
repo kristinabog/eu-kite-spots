@@ -1,0 +1,17 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitespots</title>
+</head>
+<body>
+    {% for spot in spots %}
+        {{ spot.spot_name }}<br>
+        {{ spot.spot_region }}<br>
+        {{ spot.spot_level }}<br>
+        {{ spot.spot_best_time }}<br>
+        {{ spot.spot_image }}<br>
+    {% endfor %}
+</body>
+</html>
