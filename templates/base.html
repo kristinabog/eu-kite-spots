@@ -19,7 +19,8 @@
                 <a href="#" class="brand-logo"><img id="logo" src="../static/img/logo.png"></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Kitesurf Spots</a></li>
+                    <li><a href="#">Spots</a></li>
+                    <li><a href="#">Countries</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">Log In</a></li>
                     <li><a href="#">Sign up</a></li>
@@ -27,14 +28,8 @@
             </div>
         </nav>
 
-        <div class="callout-container">
-            <div class="row center-align">
-            {% block header %}
-            {% endblock %}
-            </div>
-            <div class="opaque-overlay">&nbsp;</div>
-        </div>
-
+        {% block header %}
+        {% endblock %}
     
     </header>
 
