@@ -5,7 +5,7 @@
 .callout-container {
     height: 66vh;
 
-    background: url("https://cdn.pixabay.com/photo/2018/12/05/13/04/kite-surfing-3857698_1280.jpg") no-repeat center center fixed; 
+    background: url("../img/kitesurf-bg.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -39,9 +39,7 @@
 /*---------------- Navbar */
 
 #logo {
-    margin-top: 10px;
-    margin-left: 10px;
-    max-width: 50%;
+    margin-left: 5px;
 }
 
 nav ul a {
@@ -50,4 +48,28 @@ nav ul a {
     letter-spacing: 1px;
     text-transform: uppercase;
 }
+
+/* -------------- kitespots.hmtl */
+
+.intro-header .intro-p {
+    font-family: Montserrat;
+    color: #344c5c;
+}
+
+.intro-header {
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.intro-p {
+    text-align: justify;
+    font-size: 13.5px
+}
+
+iframe {
+    margin-top: 20px;
+}
+
 
