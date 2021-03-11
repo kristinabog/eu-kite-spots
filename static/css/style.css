@@ -49,7 +49,7 @@ nav ul a {
     text-transform: uppercase;
 }
 
-/* -------------- kitespots.hmtl */
+/* -------------- kitespots.html */
 
 .intro-header .intro-p {
     font-family: Montserrat;
@@ -70,6 +70,20 @@ nav ul a {
 
 iframe {
     margin-top: 20px;
+}
+
+/*----------------- Footer */
+
+.footer-copyright {
+    min-height: 40px;
+}
+
+.fab {
+    color: #fff;
+}
+
+.fab:hover {
+    color: #344c5c;
 }
 
 

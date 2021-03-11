@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     {% block styles %}
     {% endblock %}
-    <title>Kitesurf spots in Europe</title>
+    <title>Kitesurf Spots in Europe</title>
 </head>
 <body>
 
@@ -29,20 +29,18 @@
 
         <div class="callout-container">
             <div class="row center-align">
-            <h1 id="callout-header">Find or share the perfect KiteSurf Spot</h1>
-            <p>
-                <a class="waves-effect waves-light btn" href="#">Log in</a>
-                or 
-                <a class="waves-effect waves-light btn pulse" href="#">Sign up</a>
-            </p>
+            {% block header %}
+            {% endblock %}
             </div>
             <div class="opaque-overlay">&nbsp;</div>
         </div>
 
     
     </header>
+
     {% block content %}
     {% endblock %}
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -50,4 +48,15 @@
     {% block scripts %}
     {% endblock %}
 </body>
+
+<footer>
+    <div class="footer-copyright teal lighten-2 valign-wrapper">
+        <div class="container white-text center-align">
+            &copy; 2021 Copyright | 
+            <a href="https://github.com/kristinabog"><i class="fab fa-github-square"></i></a>
+            <a href="https://www.linkedin.com/in/kristina-bogdanovic-407918202/"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+</footer>
+
 </html>
