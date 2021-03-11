@@ -79,11 +79,16 @@
     margin-left: 5px;
 }
 
-nav ul a {
+nav ul a,
+.sidenav {
     color: #344c5c;
     font-weight: 500;
     letter-spacing: 1px;
     text-transform: uppercase;
+}
+
+.sidenav li {
+    margin-top: 17px;
 }
 
 /* -------------- kitespots.html */
@@ -133,4 +138,25 @@ iframe {
     color: #344c5c;
 }
 
+
+/*---------- Media Queries */
+
+@media only screen and (max-width: 500px) {
+    #logo {
+        margin-left: 0px;
+    }
+
+    nav .brand-logo {
+        left: 0;
+        transform: translateX(0);
+    }   
+}
+
+@media only screen and (max-width: 360px) {
+    #logo {
+        margin-top: 5px;
+        max-width: 80%;
+    }
+
+}
 
