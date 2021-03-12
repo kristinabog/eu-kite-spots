@@ -157,6 +157,24 @@ iframe {
         margin-top: 5px;
         max-width: 80%;
     }
-
 }
 
+.login-bg {
+    height: 95vh;
+    background: url('https://cdn.pixabay.com/photo/2019/06/14/11/05/beach-4273396_1280.jpg');
+    background-size: cover;
+    opacity: 0.4;
+}
+
+.panel {
+    margin-top: 50px;
+}
+
+#signup {
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    background: url('https://cdn.pixabay.com/photo/2019/06/14/11/05/beach-4273396_1280.jpg');
+    background-size: cover;
+    opacity: 0.4;
+}
