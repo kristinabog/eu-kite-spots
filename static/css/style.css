@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
 
+body, html {
+  height: 100%;
+}
+
 /*--------------- Callout */
 
 .callout-container {
@@ -150,6 +154,7 @@ iframe {
         left: 0;
         transform: translateX(0);
     }   
+
 }
 
 @media only screen and (max-width: 360px) {
@@ -159,22 +164,35 @@ iframe {
     }
 }
 
-/* .login-bg {
-    height: 95vh;
-    background: url('https://cdn.pixabay.com/photo/2019/06/14/11/05/beach-4273396_1280.jpg');
-    background-size: cover;
-    opacity: 0.4;
-} */
+.fas {
+    margin-right: 10px;
+}
 
 .panel {
     margin-top: 50px;
 }
 
-#signup {
-    justify-content: center;
-    align-items: center;
+.signup {
     height: 86vh;
-    /*background: url('https://cdn.pixabay.com/photo/2019/06/14/11/05/beach-4273396_1280.jpg');
-    background-size: cover;
-    opacity: 0.4;*/
+    position: relative; 
+    width: 100%;
+}
+
+/* Credit for opacity of background image https://coder-coder.com/background-image-opacity/ */
+
+.signup::before {    
+      content: "";
+      background-image: url('../img/login-bg.jpg');
+      background-size: cover;
+      position: absolute;
+      background-repeat: no-repeat;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.4;
+}
+
+.card-panel {
+    position: relative;
 }

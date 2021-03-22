@@ -1,28 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
-            <div class="container" id="signup">
+            <div class="container signup">
             <div class="row">
-                <div class="col s12 m8 offset-m2">
+                <div class="col s12 m6 offset-m3">
                     <div class="card-panel panel">
                        <!-- username -->
                         <div class="row">
-                            <div class="input-field col s12 center-align">
+                            <div class="input-field col s12">
                                 <i class="fas fa-user prefix teal-text"></i>
                                 <input id="username" name="username" type="text" class="validate">
                                 <label for="username">Username</label>
                             </div>
                         </div>
-                            <!-- passowrd -->
-                        <div class="row center-align">
+                            <!-- password -->
+                        <div class="row">
                             <div class="input-field col s12">
                                 <i class="fas fa-key prefix teal-text"></i>
                                 <input id="password" name="password" type="password" class="validate">
                                 <label for="password">Password</label>
                             </div>
                         </div>
-                            <!-- register -->
-                        <div class="row center-align">
-                            <button type="submit" class="col s4 btn teal">
+                            <!-- Log In -->
+                        <div class="row">
+                            <button type="submit" class="col s4 offset-m4 offset-s4 btn teal">
                                 Log In <i class="fas fa-sign-in-alt"></i>
                             </button>
                         </div>
