@@ -1,15 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap');
 
 body, html {
   height: 100%;
 }
 
+nav {
+    z-index: 1;
+}
+
+hr.solid {
+    position: absolute;
+}
+
+#header {
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    right: 20%;
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-size: 2.2rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 600;
+}
+
+
+#bg-header {
+    width: 100vw;
+    height: 75vh;
+    object-fit: cover;  
+}
+
+
 /*--------------- Callout */
 
 .callout-container {
-    height: 66vh;
 
-    background: url("../img/kitesurf-bg.jpg") no-repeat center center fixed; 
+    position: relative;
+    /*
+    height: 100vh;
+    background: url("../img/bg-gif.gif") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -20,14 +52,16 @@ body, html {
     justify-content: left;
 
     position: relative;
+    */
 
-    /* credit for fade in css: https://stackoverflow.com/questions/11679567/using-css-for-a-fade-in-effect-on-page-load */
-    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    /* credit for fade in css: https://stackoverflow.com/questions/11679567/using-css-for-a-fade-in-effect-on-page-load */ 
+     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 2s; /* Firefox < 16 */
         -ms-animation: fadein 2s; /* Internet Explorer */
          -o-animation: fadein 2s; /* Opera < 12.1 */
             animation: fadein 2s;
 }
+    
 
 
 @keyframes fadein {
