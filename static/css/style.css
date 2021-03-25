@@ -3,10 +3,7 @@
 
 body, html {
   height: 100%;
-}
-
-nav {
-    z-index: 1;
+  background: #f7fbfb;
 }
 
 hr.solid {
@@ -37,9 +34,7 @@ hr.solid {
     align-items: center;
     text-align: center;
     justify-content: center;
-
 }
-
 
 #bg-header {
     width: 100vw;
@@ -51,6 +46,7 @@ hr.solid {
 /*--------------- Callout */
 
 .callout-container {
+
     /* credit for fade in css: https://stackoverflow.com/questions/11679567/using-css-for-a-fade-in-effect-on-page-load */ 
      -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -58,7 +54,18 @@ hr.solid {
          -o-animation: fadein 2s; /* Opera < 12.1 */
             animation: fadein 2s;
 }
+
+#callout-header {
+    font-size: 27px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #344c5c;
+    text-transform: uppercase;
+    text-shadow: 0.2px 0.4px #344c5c;
+}
     
+/* ----- Fade in effect
+    credit https://stackoverflow.com/questions/11679567/using-css-for-a-fade-in-effect-on-page-load */ 
 
 @keyframes fadein {
     from { opacity: 0; }
@@ -89,24 +96,6 @@ hr.solid {
     to   { opacity: 1; }
 }
 
-.opaque-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-#callout-header {
-    font-size: 27px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    color: #344c5c;
-    text-transform: uppercase;
-    text-shadow: 0.2px 0.4px #344c5c;
-}
-
 /*---------------- Navbar */
 
 #logo {
@@ -122,7 +111,6 @@ nav ul a,
     font-family: 'Montserrat', sans-serif;
     text-shadow: 0.5px 0.5px 1px #344c5c;
 }
-
 
 .sidenav li {
     margin-top: 17px;
@@ -141,17 +129,21 @@ nav ul a,
     font-weight: 500;
     letter-spacing: 3px;
     text-shadow: 0.5px 0.5px 0.7px #344c5c;
+    margin-top: 1.424rem;
 }
 
 .intro-p {
     text-align: justify;
     font-size: 13.5px;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
-iframe {
-    margin-top: 20px;
+.intro-row {
+    margin: 60px 40px;
+}
 
+hr.hr-intro {
+    border: 0.1px solid #344c5c;
 }
 
 #fade-in {
@@ -169,6 +161,7 @@ iframe {
     min-height: 40px;
     font-size: 11px;
     font-family: 'Montserrat', sans-serif;
+    background: #344c5c;
 }
 
 .fab {
@@ -176,9 +169,8 @@ iframe {
 }
 
 .fab:hover {
-    color: #344c5c;
+    color:#c1e1ec;
 }
-
 
 /*---------- Media Queries */
 
@@ -194,6 +186,10 @@ iframe {
 
     #header {
         font-size: 1.8rem;
+    }
+
+    .intro-row {
+        margin: 60px 10px;
     }
 }
 
