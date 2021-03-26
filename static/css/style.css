@@ -2,44 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap');
 
 body, html {
-  height: 100%;
-  background: #f7fbfb;
-}
-
-hr.solid {
-    height: 0.5px;
-    border-width: 0.5px;
-    background-color: #fff;
-}
-
-#header {
-    font-family: 'Cormorant Garamond', sans-serif;
-    font-size: 2.2rem;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-weight: 600;
-    margin-top: 1.68rem;
-    text-shadow: 0.5px 0.5px 1px;
-}
-
-#col-header {
-    position: absolute;
-}
-
-#row-header {
-    position: relative;
-    display: flex;
-    vertical-align: middle;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-}
-
-#bg-header {
-    width: 100vw;
-    height: 75vh;
-    object-fit: cover;  
+    height: 100%;
+    background: #f7fbfb;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -118,6 +84,47 @@ nav ul a,
 
 /* -------------- kitespots.html */
 
+/* Header */
+
+hr.solid {
+    height: 0.5px;
+    border-width: 0.5px;
+    background-color: #fff;
+}
+
+#header {
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-size: 2.2rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 600;
+    margin-top: 1.68rem;
+    text-shadow: 0.5px 0.5px 1px;
+}
+
+#col-header {
+    position: absolute;
+}
+
+#row-header {
+    position: relative;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+#bg-header {
+    width: 100vw;
+    height: 75vh;
+    object-fit: cover;  
+}
+
+/* Intro */
+
+
 .intro-header, .intro-p {
     font-family: 'Montserrat', sans-serif;
     color: #344c5c;
@@ -154,6 +161,15 @@ hr.hr-intro {
             animation: fadein 2s;
 }
 
+/* ---------------- Log In and Sign Up */
+
+.login-container {
+    height: 86vh;
+}
+
+.panel {
+    background: url('../static/img/login-bg1.jpg');
+}
 
 /*----------------- Footer */
 
@@ -200,31 +216,6 @@ hr.hr-intro {
     }
 }
 
-.panel {
-    margin-top: 50px;
-}
-
-.signup {
-    height: 86vh;
-    position: relative; 
-    width: 100%;
-}
 
 /* Credit for opacity of background image https://coder-coder.com/background-image-opacity/ */
 
-.signup::before {    
-      content: "";
-      background-image: url('../img/login-bg.jpg');
-      background-size: cover;
-      position: absolute;
-      background-repeat: no-repeat;
-      top: 0px;
-      right: 0px;
-      bottom: 0px;
-      left: 0px;
-      opacity: 0.4;
-}
-
-.card-panel {
-    position: relative;
-}

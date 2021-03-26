@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
-            <div class="container signup">
-            <div class="row">
-                <div class="col s12 m6 offset-m3">
+            <div class="container login-container">
+            <div class="row center-align">
                     <div class="card-panel panel">
                        <!-- username -->
+                       <div class="col s6">
+                           <img src="../static/img/login-bg1.jpg">
+                           <div class="col s12">
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="fas fa-user prefix teal-text"></i>
@@ -20,6 +22,7 @@
                                 <label for="password">Password</label>
                             </div>
                         </div>
+                        </div>
                             <!-- Log In -->
                         <div class="row">
                             <button type="submit" class="col s4 offset-m4 offset-s4 btn teal">
@@ -30,4 +33,5 @@
                 </div>
             </div>
         </div>
+
 {% endblock %}
