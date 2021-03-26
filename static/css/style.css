@@ -169,25 +169,20 @@ hr.hr-intro {
 
 .login-wrap {
     display: flex;
-    /*height: 30rem;
-    width: 50rem;*/
     background-color: #fff;
     border-radius: 5px;
     overflow: hidden;
+    width: 50rem;
 }
 
 .login-left {
-    background-image: url('../img/login-bg.jpg');
+    background: 
+        linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)),
+        url('../img/login-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     border-radius: 5px 0 0 5px;
-    flex: 1;
-}
-
-.login-left,
-.login-right {
-    flex: 1;
 }
 
 .login-header {
@@ -196,12 +191,20 @@ hr.hr-intro {
     color:#344c5c;
     text-transform: uppercase;
     text-shadow: 1px 0px 1px #344c5c;
-
+    margin-top: 21.36px;
 }
 
-@media only screen and (max-width: 600px) {
+.hr-login {
+    border: 0.1px solid #344c5c;
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px
+}
+
+@media only screen and (max-width: 630px) {
     .login-wrap {
         display: block;
+        width: 30rem;
     }
 
     .login-bg {
@@ -212,8 +215,6 @@ hr.hr-intro {
         height: 200px;
     }
 }
-
-
 
 /*----------------- Footer */
 
