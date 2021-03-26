@@ -118,7 +118,7 @@ hr.solid {
 
 #bg-header {
     width: 100vw;
-    height: 75vh;
+    height: 90vh;
     object-fit: cover;  
 }
 
@@ -260,7 +260,3 @@ hr.hr-intro {
         max-width: 80%;
     }
 }
-
-
-/* Credit for opacity of background image https://coder-coder.com/background-image-opacity/ */
-
