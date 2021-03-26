@@ -75,7 +75,7 @@ nav ul a,
     letter-spacing: 1px;
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
-    text-shadow: 0.5px 0.5px 1px #344c5c;
+    text-shadow: 0.4px 0.4px 0.7px #344c5c;
 }
 
 .sidenav li {
@@ -167,9 +167,53 @@ hr.hr-intro {
     height: 86vh;
 }
 
-.panel {
-    background: url('../static/img/login-bg1.jpg');
+.login-wrap {
+    display: flex;
+    /*height: 30rem;
+    width: 50rem;*/
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
 }
+
+.login-left {
+    background-image: url('../img/login-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    border-radius: 5px 0 0 5px;
+    flex: 1;
+}
+
+.login-left,
+.login-right {
+    flex: 1;
+}
+
+.login-header {
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-size: 2.6rem;
+    color:#344c5c;
+    text-transform: uppercase;
+    text-shadow: 1px 0px 1px #344c5c;
+
+}
+
+@media only screen and (max-width: 600px) {
+    .login-wrap {
+        display: block;
+    }
+
+    .login-bg {
+        border-radius: 5px 5px 0 0;
+    }
+
+    .login-left {
+        height: 200px;
+    }
+}
+
+
 
 /*----------------- Footer */
 
