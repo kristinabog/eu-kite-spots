@@ -168,7 +168,7 @@ hr.hr-intro {
 }
 
 .login-wrap {
-    display: flex;
+    display: inline-flex;
     background-color: #fff;
     border-radius: 5px;
     overflow: hidden;
@@ -204,7 +204,8 @@ hr.hr-intro {
 @media only screen and (max-width: 630px) {
     .login-wrap {
         display: block;
-        width: 30rem;
+        width: 20rem;
+        height: 37rem;
     }
 
     .login-bg {
@@ -212,7 +213,11 @@ hr.hr-intro {
     }
 
     .login-left {
-        height: 200px;
+        height: 120px;
+    }
+
+    .login-right {
+        height: 10rem;
     }
 }
 
@@ -235,6 +240,19 @@ hr.hr-intro {
 
 /*---------- Media Queries */
 
+@media only screen and (max-width: 780px) and (min-width: 600px) {
+
+    .login-wrap {
+        width: 37rem;
+        height: 29rem;
+    }
+
+    .login-left {
+        height: 29rem;
+    }
+}
+
+
 @media only screen and (max-width: 500px) {
     #logo {
         margin-left: 0px;
@@ -252,6 +270,10 @@ hr.hr-intro {
     .intro-row {
         margin: 60px 10px;
     }
+
+    .login-container {
+        height: 100vh;
+    }
 }
 
 @media only screen and (max-width: 360px) {
@@ -259,4 +281,10 @@ hr.hr-intro {
         margin-top: 5px;
         max-width: 80%;
     }
+}
+
+@media only screen and (max-width: 300px) {
+    .login-wrap {
+        width: 18rem;
+    }   
 }
