@@ -1,33 +1,38 @@
 {% extends "base.html" %}
 {% block content %}
-        <div class="container login-pages">
-            <div class="row">
-                <div class="col s12 m6 offset-m3">
-                    <div class="card-panel panel">
+        <div class="container login-container valign-wrapper">
+                <div class="row center-align">
                        <!-- username -->
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <i class="fas fa-user-plus prefix teal-text"></i>
-                                <input id="username" name="username" type="text" class="validate">
-                                <label for="username">Username</label>
-                            </div>
+                    <div class="login-wrap z-depth-4">
+                        <div class="col s12 m6 login-left">
                         </div>
-                            <!-- passowrd -->
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <i class="fas fa-key prefix teal-text"></i>
-                                <input id="password" name="password" type="password" class="validate">
-                                <label for="password">Password</label>
+                        <div class="col s12 m6 login-right">
+                            <div class="row">
+                                <hr class="hr-login">
+                                <h2 class="login-header" id="signup-header">Create Account</h2>
+                                <hr class="hr-login">
+                                <div class="input-field col s12">
+                                    <i class="prefix material-icons">perm_identity</i>
+                                    <input id="username" name="username" type="text" class="validate">
+                                    <label for="username">Username</label>
+                                </div>
                             </div>
-                        </div>
-                            <!-- register -->
-                        <div class="row">
-                            <button type="submit" class="col s4 offset-m4 offset-s4 btn teal">
-                                Register <i class="fas fa-sign-in-alt"></i>
-                            </button>
+                            <!-- password -->
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="prefix material-icons">lock_outline</i>
+                                    <input id="password" name="password" type="password" class="validate">
+                                    <label for="password">Password</label>
+                                </div>
+                            </div>
+                                <!-- Log In -->
+                            <div class="row">
+                                <button type="submit" class="col s4 offset-m4 offset-s4 btn teal">
+                                        Sign Up
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 {% endblock %}

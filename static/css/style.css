@@ -201,6 +201,10 @@ hr.hr-intro {
     margin-bottom: 20px
 }
 
+#signup-header {
+    font-size: 2.3rem;
+}
+
 @media only screen and (max-width: 630px) {
     .login-wrap {
         display: block;
