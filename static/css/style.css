@@ -164,7 +164,7 @@ hr.hr-intro {
 /* ---------------- Log In and Sign Up */
 
 .login-container {
-    height: 86vh;
+    height: 100vh;
 }
 
 .login-wrap {
@@ -205,6 +205,63 @@ hr.hr-intro {
     font-size: 2.3rem;
 }
 
+/*----------------- Footer */
+
+.page-footer {
+    background-color: #344c5c;
+}
+
+.footer-copyright {
+    min-height: 40px;
+    font-size: 11px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fab {
+    color: #fff;
+}
+
+#social-media ul li {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 7px;
+}
+
+#social-media ul li a {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    font-size: 15px;
+    height: 30px;
+    padding: 3px 7px;
+    width: 30px;
+    transition: .5s;
+}
+
+#social-media ul li a:hover {
+    background-color:#8199a9;
+}
+
+#footer-links ul li {
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+/*---------- Media Queries */
+
+@media only screen and (max-width: 780px) and (min-width: 600px) {
+
+    .login-wrap {
+        width: 37rem;
+        height: 29rem;
+    }
+
+    .login-left {
+        height: 29rem;
+    }
+}
+
 @media only screen and (max-width: 630px) {
     .login-wrap {
         display: block;
@@ -222,37 +279,6 @@ hr.hr-intro {
 
     .login-right {
         height: 10rem;
-    }
-}
-
-/*----------------- Footer */
-
-.footer-copyright {
-    min-height: 40px;
-    font-size: 11px;
-    font-family: 'Montserrat', sans-serif;
-    background: #344c5c;
-}
-
-.fab {
-    color: #fff;
-}
-
-.fab:hover {
-    color:#c1e1ec;
-}
-
-/*---------- Media Queries */
-
-@media only screen and (max-width: 780px) and (min-width: 600px) {
-
-    .login-wrap {
-        width: 37rem;
-        height: 29rem;
-    }
-
-    .login-left {
-        height: 29rem;
     }
 }
 
@@ -277,6 +303,13 @@ hr.hr-intro {
 
     .login-container {
         height: 100vh;
+    }
+}
+
+@media only screen and (max-width: 373px) {
+    #social-media ul li {
+        margin-left: 0px;
+        margin-bottom: 7px;
     }
 }
 
