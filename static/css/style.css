@@ -248,6 +248,33 @@ hr.hr-intro {
     font-size: 13px;
 }
 
+/* --------- Flash Messages */
+
+.flash {
+    background-color: #344c5c;
+    border-radius: 10px;
+    margin-top: 30px;
+    width: 30rem;
+    justify-content: center;  
+}
+
+#flash-msg {
+    font-family: 'Montserrat';
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 1px;
+    text-shadow: 0.4px 0.4px 1px #fff;
+}
+
+@media only screen and (max-width: 780px) {
+    .flash {
+        width: 25rem;
+    }
+}
+
+
 /*---------- Media Queries */
 
 @media only screen and (max-width: 780px) and (min-width: 600px) {
@@ -262,7 +289,7 @@ hr.hr-intro {
     }
 }
 
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 600px) {
     .login-wrap {
         display: block;
         width: 20rem;
@@ -304,6 +331,21 @@ hr.hr-intro {
     .login-container {
         height: 100vh;
     }
+
+    .flash {
+        width: 20rem;
+    }
+}
+
+
+@media only screen and (max-width: 375px) {
+    .flash {
+        width: 18rem;
+    }
+
+    #flash-msg {
+        font-size: 16px;
+    }
 }
 
 @media only screen and (max-width: 373px) {
@@ -317,6 +359,10 @@ hr.hr-intro {
     #logo {
         margin-top: 5px;
         max-width: 80%;
+    }
+
+    .flash {
+        width: 16rem;
     }
 }
 
