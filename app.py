@@ -23,8 +23,27 @@ mongo = PyMongo(app)
 def kite_spots():
     return render_template("kitespots.html")
 
+
 @app.route("/sign_up", methods=["GET", "POST"])
 def sign_up():
+    if request.method == "POST":
+        # checks if username already exists in database
+        existing_user = mongo.db.user.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            flash("Username already in use")
+            return redirect(url_for("register"))
+
+        register = {
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+        mongo.db.users.insert_one(register)
+
+        # put the new user into 'session' cookie
+        session["user"] = request.form.get("username").lower()
+        flash("Account created!")
     return render_template("sign_up.html")
 
 

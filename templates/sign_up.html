@@ -2,22 +2,22 @@
 {% block content %}
         <div class="container login-container valign-wrapper">
                 <div class="row center-align">
-                       <!-- username -->
                     <div class="login-wrap z-depth-4">
                         <div class="col s12 m6 login-left">
                         </div>
-                        <div class="col s12 m6 login-right">
+                        <form class="col s12 m6 login-right" method="POST" action="{{ url_for('sign_up') }}">
                             <div class="row">
                                 <hr class="hr-login">
                                 <h2 class="login-header" id="signup-header">Create Account</h2>
                                 <hr class="hr-login">
+                            <!-- Username -->
                                 <div class="input-field col s12">
                                     <i class="prefix material-icons">perm_identity</i>
                                     <input id="username" name="username" type="text" class="validate">
                                     <label for="username">Username</label>
                                 </div>
                             </div>
-                            <!-- password -->
+                            <!-- Password -->
                             <div class="row">
                                 <div class="input-field col s12">
                                     <i class="prefix material-icons">lock_outline</i>
@@ -25,13 +25,13 @@
                                     <label for="password">Password</label>
                                 </div>
                             </div>
-                                <!-- Log In -->
+                            <!-- Sign Up -->
                             <div class="row">
-                                <button type="submit" class="col s4 offset-m4 offset-s4 btn teal">
+                                <button type="submit" class="col s4 offset-m4 offset-s4 btn teal waves-effect waves-light">
                                         Sign Up
                                 </button>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
