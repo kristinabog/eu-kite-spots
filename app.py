@@ -99,7 +99,8 @@ def log_out():
 
 @app.route("/spots")
 def spots():
-    return render_template("spots.html")
+    spots = list(mongo.db.spots.find())
+    return render_template("spots.html", spots=spots)
 
 
 if __name__ == "__main__":
