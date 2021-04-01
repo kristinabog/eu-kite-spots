@@ -97,6 +97,11 @@ def log_out():
     return redirect(url_for("log_in"))
 
 
+@app.route("/spots")
+def spots():
+    return render_template("spots.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
