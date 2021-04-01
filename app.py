@@ -19,9 +19,9 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/kite_spots")
-def kite_spots():
-    return render_template("kitespots.html")
+@app.route("/home")
+def home():
+    return render_template("home.html")
 
 
 @app.route("/sign_up", methods=["GET", "POST"])

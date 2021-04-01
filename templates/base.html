@@ -17,10 +17,10 @@
     <header>
         <nav class="nav-extended white">
             <div class="nav-wrapper">
-                <a href="{{ url_for('kite_spots') }}" class="brand-logo"><img id="logo" src="../static/img/logo.png"></a>
+                <a href="{{ url_for('home') }}" class="brand-logo"><img id="logo" src="../static/img/logo.png"></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="black-text fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="{{ url_for('kite_spots') }}">Home</a></li>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
                     <li><a href="#">Spots</a></li>
                     <li><a href="#">Countries</a></li>
                     {% if session.user %}
@@ -35,7 +35,7 @@
         </nav>
         <!-- mobile sidenav -->
 		<ul class="sidenav" id="mobile-demo">
-            <li><a href="{{ url_for('kite_spots') }}">Home</a></li>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="#">Spots</a></li>
             <li><a href="#">Countries</a></li>
             {% if session.user %}
