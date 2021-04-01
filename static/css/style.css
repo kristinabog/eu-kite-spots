@@ -250,21 +250,14 @@ hr.hr-intro {
 
 /* --------- Flash Messages */
 
-.flash {
-    background-color: #344c5c;
-    border-radius: 5px;
-    margin-top: 20px;
-    width: 30rem;
-    justify-content: center;  
-}
-
 #flash-msg {
     font-family: 'Montserrat';
+    background-color: #009688;
     font-size: 17px;
     font-weight: 400;
     color: #fff;
     letter-spacing: 1px;
-    text-shadow: 0.3px 0.3px 1px #fff;
+    text-shadow: 0.2px 0.2px 1px #fff;
 }
 
 /*---------- Media Queries */
@@ -278,12 +271,6 @@ hr.hr-intro {
 
     .login-left {
         height: 29rem;
-    }
-}
-
-@media only screen and (max-width: 780px) {
-    .flash {
-        width: 25rem;
     }
 }
 
@@ -327,20 +314,12 @@ hr.hr-intro {
     }
 
     .login-container {
-        height: 100vh;
-    }
-
-    .flash {
-        width: 20rem;
+        height: 120vh;
     }
 }
 
 
 @media only screen and (max-width: 375px) {
-    .flash {
-        width: 18rem;
-    }
-
     #flash-msg {
         font-size: 16px;
     }
@@ -358,18 +337,10 @@ hr.hr-intro {
         margin-top: 5px;
         max-width: 80%;
     }
-
-    .flash {
-        width: 16rem;
-    }
 }
 
 @media only screen and (max-width: 300px) {
     .login-wrap {
         width: 18rem;
     }   
-
-    .row .col.offset-s2 {
-        margin-left: 10%;
-    }
 }
