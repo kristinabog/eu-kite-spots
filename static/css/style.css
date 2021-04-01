@@ -256,8 +256,10 @@ hr.hr-intro {
     font-size: 17px;
     font-weight: 400;
     color: #fff;
-    letter-spacing: 1px;
+    letter-spacing: 0.6px;
     text-shadow: 0.2px 0.2px 1px #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 /*---------- Media Queries */
