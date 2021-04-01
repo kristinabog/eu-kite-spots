@@ -261,7 +261,7 @@ hr.hr-intro {
     padding: 5px 10px;
     border-radius: 5px;
 }
-/*---------- Profile */
+/*-------------- profile.html */
 
 #profile-h-bg {
     background: url('../img/prof-header-bg.jpg');
@@ -272,6 +272,13 @@ hr.hr-intro {
 .hr-profile {
     border: 0.1px solid #344c5c;
     margin: 0;
+}
+
+/*-------------- spots.html */
+
+.spots-container {
+    height: 60vh;
+    background: url('../img/kitesurf-bg.jpg');
 }
 
 /*---------- Media Queries */

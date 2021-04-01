@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block header %}
+        <div class="spots-container valign-wrapper">
+            <div class="row center-align" id="row-home">
+                <div class="col">
+                    <hr class="hr-profile">
+                    <h1 class="header">Kitesurf spots</h1>
+                    <hr class="hr-profile">
+                </div>
+            </div>
+        </div>
+{% endblock %}
+{% block content %}
+        <div class="container center-align">
+            <div class="row center-align">
+                <div class="col l3">
+                    <div class="card medium">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="../static/img/login-bg.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+                            <p><a href="#">This is a link</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+{% endblock %}
