@@ -82,9 +82,9 @@ nav ul a,
     margin-top: 17px;
 }
 
-/* -------------- kitespots.html */
+/* -------------- home.html */
 
-/* Header */
+/* Home */
 
 hr.solid {
     height: 0.5px;
@@ -92,7 +92,7 @@ hr.solid {
     background-color: #fff;
 }
 
-#header {
+#home-h1 {
     font-family: 'Cormorant Garamond', sans-serif;
     font-size: 2.2rem;
     color: #fff;
@@ -103,7 +103,7 @@ hr.solid {
     text-shadow: 0.5px 0.5px 1px;
 }
 
-#col-header {
+#col-home {
     position: absolute;
 }
 
@@ -185,7 +185,7 @@ hr.hr-intro {
     border-radius: 5px 0 0 5px;
 }
 
-.login-header {
+.header {
     font-family: 'Cormorant Garamond', sans-serif;
     font-size: 2.6rem;
     color:#344c5c;
@@ -260,6 +260,18 @@ hr.hr-intro {
     text-shadow: 0.2px 0.2px 1px #fff;
     padding: 5px 10px;
     border-radius: 5px;
+}
+/*---------- Profile */
+
+#profile-h-bg {
+    background: url('../img/prof-header-bg.jpg');
+    padding: 10px;
+    margin: 0;
+}
+
+.hr-profile {
+    border: 0.1px solid #344c5c;
+    margin: 0;
 }
 
 /*---------- Media Queries */
