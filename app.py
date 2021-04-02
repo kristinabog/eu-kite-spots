@@ -105,7 +105,8 @@ def spots():
 
 @app.route("/add_spot")
 def add_spot():
-    return render_template("add_spot.html")
+    countries = list(mongo.db.countries.find().sort("country_name", 1))
+    return render_template("add_spot.html", countries=countries)
 
 
 if __name__ == "__main__":
