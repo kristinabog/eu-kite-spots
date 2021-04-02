@@ -257,7 +257,6 @@ hr.hr-intro {
     font-weight: 400;
     color: #fff;
     letter-spacing: 0.6px;
-    text-shadow: 0.2px 0.2px 1px #fff;
     padding: 5px 10px;
     border-radius: 5px;
 }
@@ -278,9 +277,9 @@ hr.hr-intro {
 
 .spots-container {
     height: 35vh;
-    background: 
-        linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
-        url('../img/kitesurf-bg1.jpg');
+    background-color: 	#b2d8d8; 
+        /*linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+        url('../img/kitesurf-bg1.jpg');*/
     background-repeat: no-repeat;
     background-size: cover;
 }
