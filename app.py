@@ -103,6 +103,11 @@ def spots():
     return render_template("spots.html", spots=spots)
 
 
+@app.route("/add_spot")
+def add_spot():
+    return render_template("add_spot.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
