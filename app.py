@@ -103,8 +103,24 @@ def spots():
     return render_template("spots.html", spots=spots)
 
 
-@app.route("/add_spot")
+@app.route("/add_spot", methods=["GET, POST"])
 def add_spot():
+    if request.method == "POST":
+        spot = {
+            "country_name": request.form.get("country_name"),
+            "spot_name": request.form.get("spot_name"),
+            "spot_region": request.form.get("spot_region"),
+            "spot_level": request.form.get("spot_level"),
+            "spot_best_time": request.form.get("spot_best_time"),
+            "spot_description": request.form.get("task_description"),
+            "spot_image": request.form.get("spot_image"),
+            "spot_location": request.form.get("spot_location"),
+            "created_by": session["user"]
+        }
+        mongo.db.spots.insert_one(spot)
+        flash("Your spot has been successfully added!")
+        return redirect(url_for("spots"))
+
     countries = list(mongo.db.countries.find().sort("country_name", 1))
     return render_template("add_spot.html", countries=countries)
 
