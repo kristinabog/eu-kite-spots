@@ -1,21 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
         <div class="container login-container valign-wrapper">
-                <div class="row center-align">
+                <div class="row">
                     <div class="login-wrap z-depth-4">
                         <div class="col s12 m6 login-left">
                         </div>
                         <form class="col s12 m6 login-right" method="POST" action="{{ url_for('sign_up') }}">
-                            <div class="row">
+                            <div class="row center-align">
                                 <hr class="hr-login">
                                 <h2 class="header" id="signup-header">Create Account</h2>
                                 <hr class="hr-login">
+                            </div>
                             <!-- Username -->
+                            <div class="row">
                                 <div class="input-field col s12">
                                     <i class="prefix material-icons">perm_identity</i>
                                     <input id="username" name="username" type="text" minlength="5"
                                         maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                                     <label for="username">Username</label>
+                                    <span class="helper-text" data-error="Required" data-success="right">5 - 15 characters, no symbols</span>
                                 </div>
                             </div>
                             <!-- Password -->
@@ -25,6 +28,7 @@
                                     <input id="password" name="password" type="password" minlength="5"
                                         maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                                     <label for="password">Password</label>
+                                    <span class="helper-text" data-error="Required" data-success="right">5 - 15 characters, no symbols</span>
                                 </div>
                             </div>
                             <!-- Sign Up -->
@@ -38,7 +42,7 @@
                     <div class="row">
                         <div class="col s12">
                             <p class="center-align">
-                                Do you have an account already?
+                                Already have an account?
                                 <a href="{{ url_for('log_in') }}" class="teal-text darken-2">Log in</a>
                             </p>
                         </div>
