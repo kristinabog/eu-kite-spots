@@ -103,7 +103,7 @@ def spots():
     return render_template("spots.html", spots=spots)
 
 
-@app.route("/add_spot", methods=["GET, POST"])
+@app.route("/add_spot", methods=["GET", "POST"])
 def add_spot():
     if request.method == "POST":
         spot = {
