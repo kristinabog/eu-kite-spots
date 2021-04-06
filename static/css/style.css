@@ -277,9 +277,7 @@ hr.hr-intro {
 
 .spots-container {
     height: 35vh;
-    background-color: 	#b2d8d8; 
-        /*linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
-        url('../img/kitesurf-bg1.jpg');*/
+    background-color: #d8ebeb; 
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -333,7 +331,7 @@ hr.hr-intro {
         transform: translateX(0);
     }   
 
-    #header {
+    #h1-home {
         font-size: 1.8rem;
     }
 
@@ -343,6 +341,10 @@ hr.hr-intro {
 
     .login-container {
         height: 120vh;
+    }
+
+    .header {
+        font-size: 2rem;
     }
 }
 
