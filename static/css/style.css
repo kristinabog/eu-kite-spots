@@ -286,6 +286,29 @@ hr.hr-intro {
     margin-top: 30px;
 }
 
+/*---------- countries.html */
+
+.country-col {
+    background-color: red;
+    width: 25rem;
+    height: 15rem;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+
+.country-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+
 /*---------- Media Queries */
 
 @media only screen and (max-width: 780px) and (min-width: 600px) {

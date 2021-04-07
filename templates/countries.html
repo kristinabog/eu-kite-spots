@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block header %}
+        <div class="spots-container valign-wrapper">
+            <div class="row center-align" id="row-home">
+                <div class="col">
+                    <hr class="hr-profile">
+                    <h1 class="header">Countries</h1>
+                    <hr class="hr-profile">
+                </div>
+            </div>
+        </div>
+{% endblock %}
+{% block content %}
+<div class="container center-align">
+    <div class="row country-grid center-align">
+        {% for country in countries %}
+            <div class="col country-col center-align" style="background: url('{{ country.image_url }}')">
+                <div class="black-text">
+                    <span>{{ country.country_name }}</span>
+                    <p>test</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
