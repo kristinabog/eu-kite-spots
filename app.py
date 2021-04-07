@@ -147,6 +147,13 @@ def edit_spot(spot_id):
     return render_template("edit_spot.html", spot=spot, countries=countries)
 
 
+@app.route("/delete_spot/<spot_id>")
+def delete_spot(spot_id):
+    mongo.db.spots.remove({"_id": ObjectId(spot_id)})
+    flash("Spot Successfully Deleted")
+    return redirect(url_for("spots"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
