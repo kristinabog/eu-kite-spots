@@ -68,12 +68,12 @@ def log_in():
             else:
                 # password does not match
                 flash("Incorrect Username and/or Password")
-                return redirect(url_for("login"))
+                return redirect(url_for("log_in"))
 
         else:
             # username not in db
             flash("Incorrect Username and/or Password")
-            return redirect(url_for("login"))
+            return redirect(url_for("log_in"))
 
     return render_template("login.html")
 
@@ -127,6 +127,21 @@ def add_spot():
 
 @app.route("/edit_spot/<spot_id>", methods=["GET", "POST"])
 def edit_spot(spot_id):
+    if request.method == "POST":
+        submit = {
+                "country_name": request.form.get("country_name"),
+                "spot_name": request.form.get("spot_name"),
+                "spot_region": request.form.get("spot_region"),
+                "spot_level": request.form.get("spot_level"),
+                "spot_best_time": request.form.get("spot_best_time"),
+                "spot_description": request.form.get("task_description"),
+                "spot_image": request.form.get("spot_image"),
+                "spot_location": request.form.get("spot_location"),
+                "created_by": session["user"]
+        }
+        mongo.db.spots.update({"_id": ObjectId(spot_id)}, submit)
+        flash("Spot successfully updated")
+
     spot = mongo.db.spots.find_one({"_id": ObjectId(spot_id)})
     countries = list(mongo.db.countries.find().sort("category_name", 1))
     return render_template("edit_spot.html", spot=spot, countries=countries)
