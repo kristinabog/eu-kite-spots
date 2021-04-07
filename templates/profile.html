@@ -11,7 +11,7 @@
                         </h3>
                         <hr class="hr-profile">
                     </div>
-                    <div class="row">
+                    <div class="row center-align">
                         <p>
                             Username: {{ session.user }}
                         </p>
@@ -26,8 +26,27 @@
                         </h3>
                         <hr class="hr-profile">
                     </div>
-                    <div class="row">
+                    <div class="row center-align">
+                        {% for spot in spots %}
+                            {% if session.user|lower == spot.created_by|lower %}
+                                <p>{{ spot.spot_name}}</p>
+                            {% endif %}
+                        {% endfor %}
                     </div>
+                    {% if session.user|lower == "admin"|lower %}
+                    <div class="row">
+                        <hr class="hr-profile">
+                        <h3 class="center-align header" id="profile-h-bg">
+                            <span>Countries</span>
+                        </h3>
+                        <hr class="hr-profile">
+                    </div>
+                    <div class="row center-align">
+                        {% for country in countries %}
+                            <p>{{ country.country_name }}</p>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
                 </div>
             </div>
         </div>

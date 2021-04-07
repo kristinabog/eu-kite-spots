@@ -84,7 +84,11 @@ def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     if session["user"]:
-        return render_template("profile.html", username=username)
+        spots = list(mongo.db.spots.find())
+        countries = list(mongo.db.countries.find().sort("category_name", 1))
+        return render_template(
+            "profile.html", username=username,
+            countries=countries, spots=spots)
 
     return redirect(url_for("log_in"))
 
@@ -152,6 +156,12 @@ def delete_spot(spot_id):
     mongo.db.spots.remove({"_id": ObjectId(spot_id)})
     flash("Spot Successfully Deleted")
     return redirect(url_for("spots"))
+
+
+@app.route("/countries")
+def countries():
+    countries = list(mongo.db.countries.find().sort("country_name", 1))
+    return render_template("countries.html", countries=countries)
 
 
 if __name__ == "__main__":
