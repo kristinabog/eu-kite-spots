@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="row card-panel col s12 m8 l6">
+        <hr class="hr-profile">
+        <h3 class="header center-align">Add Country</h3>
+        <hr class="hr-profile" style="margin-bottom: 40px;">
+        <form class="col s12" method="POST" action="{{ url_for('add_country') }}">
+            <!-- country selection -->
+            <div class="row">
+                <div class="input-field col s12 l5">
+                    <i class="fas fa-globe-europe prefix teal-text"></i>
+                    <select id="country_name" name="country_name" class="validate" required>
+                        <option value="" disabled selected>Choose Country</option>
+                        {% for country in countries %}
+                            <option value="{{ country.country_name }}">{{ country.country_name }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="country_name">Countries</label>
+                </div>
+            </div>
+            <!-- spot name and region-->
+            <div class="row">
+                <div class="input-field col s12 l6">
+                    <input id="spot_name" name="spot_name" 
+                    minlength="5" maxlength="50" type="text" class="validate" required>
+                    <label for="spot_name">Name</label>
+                    <span class="helper-text" data-error="Required">Name of Beach, Bay, Surf club, etc.</span>
+                </div>
+                <div class="input-field col s12 l6">
+                    <input id="spot_region" name="spot_region" 
+                    minlength="5" maxlength="50" type="text" class="validate" required>
+                    <label for="spot_region">Region</label>
+                    <span class="helper-text" data-error="Required">In which region, area, island</span>
+                </div>
+            </div>
+            <!-- spot level and best time -->
+            <div class="row">
+                <div class="input-field col s12 l6">
+                    <input id="spot_best_time" name="spot_best_time" 
+                    minlength="5" maxlength="50" type="text" class="validate" required>
+                    <label for="spot_best_time">Best time</label>
+                    <span class="helper-text" data-error="Required">Best month(s) for kitesurfing</span>
+                </div>
+                <div class="input-field col s12 l6">
+                    <input id="spot_level" name="spot_level" 
+                    minlength="5" maxlength="50" type="text" class="validate" required>
+                    <label for="spot_level">Level of expertise</label>
+                    <span class="helper-text" data-error="Required">The spot is suitable for a: beginner, intermediate, expert or all</span>
+                </div>
+            </div>
+            <!-- image and location -->
+            <div class="row">
+                <div class="input-field col s12 l6">
+                    <input id="spot_image" name="spot_image" type="text" class="validate" required>
+                    <label for="spot_image">Image URL</label>
+                    <span class="helper-text" data-error="Required">Valid image URL</span>
+                </div>
+                <div class="input-field col s12 l6">
+                    <input id="spot_location" name="spot_location" type="text" class="validate" required>
+                    <label for="spot_location">Location Coordinates</label>
+                    <span class="helper-text" data-error="Required">Map coordinates</span>
+                </div>
+            </div>
+            <!-- description -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="spot_description" name="spot_description"
+                    minlength="5" maxlength="200" class="materialize-textarea validate" required></textarea>
+                    <label for="spot_description">Description</label>
+                </div>
+            </div>
+            <!-- submit button-->
+            <div class="row center-align">
+                <button type="submit" class="btn teal waves-effect waves-light">
+                    <span>Submit</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

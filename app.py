@@ -164,6 +164,20 @@ def countries():
     return render_template("countries.html", countries=countries)
 
 
+@app.route("/add_country", methods=["GET", "POST"])
+def add_country():
+    if request.method == "POST":
+        country = {
+            "country_name": request.form.get("country_name"),
+            "image_url": request.form.get("image_url")
+        }
+        mongo.db.countries.insert_one(country)
+        flash("New Country Added")
+        return redirect(url_for("countries"))
+
+    return render_template("add_country.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
