@@ -262,7 +262,7 @@ hr.hr-intro {
 }
 /*-------------- profile.html */
 
-#profile-h-bg {
+.profile-h-bg {
     background: url('../img/prof-header-bg.jpg');
     padding: 10px;
     margin: 0;

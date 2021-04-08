@@ -1,12 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="container login-container">
+    <div class="container">
         <div class="row">
             <div class="col s12 m8 offset-m2">
                 <div class="card-panel">
+                    <!-- Profile section -->
                     <div class="row">
                         <hr class="hr-profile">
-                        <h3 class="center-align header" id="profile-h-bg">
+                        <h3 class="center-align header profile-h-bg">
                             <span>Your Profile</span>
                         </h3>
                         <hr class="hr-profile">
@@ -15,38 +16,70 @@
                         <p>
                             Username: {{ session.user }}
                         </p>
-                        <button class="btn teal waves-effect waves-light">
-                            <span>Add Spot</span>
-                        </button>
                     </div>
+                    <!-- Profile section -->
+                    <!-- Spots section -->
                     <div class="row">
                         <hr class="hr-profile">
-                        <h3 class="center-align header" id="profile-h-bg">
+                        <h3 class="center-align header profile-h-bg">
                             <span>Your Spots</span>
                         </h3>
                         <hr class="hr-profile">
                     </div>
                     <div class="row center-align">
+                        <a class="btn teal waves-effect waves-light">
+                            <i class="fas fa-plus-square right"></i>Add Spot
+                        </a>
+                    </div>
+                    <div class="row center-align">
+                        <!-- Display spots of the user -->
                         {% for spot in spots %}
                             {% if session.user|lower == spot.created_by|lower %}
                                 <p>{{ spot.spot_name}}</p>
                             {% endif %}
                         {% endfor %}
+                        <!-- Display when there are no spots -->
+                        {% if not spots == {} %}
+                            <p>No Spots yet!</p>
+                        {% endif %}
                     </div>
+                    <!-- Spots section -->
+                    <!-- Countries section - only visible to admin-->
                     {% if session.user|lower == "admin"|lower %}
                     <div class="row">
                         <hr class="hr-profile">
-                        <h3 class="center-align header" id="profile-h-bg">
+                        <h3 class="center-align header profile-h-bg">
                             <span>Countries</span>
                         </h3>
                         <hr class="hr-profile">
                     </div>
                     <div class="row center-align">
-                        {% for country in countries %}
-                            <p>{{ country.country_name }}</p>
-                        {% endfor %}
+                        <a href="{{ url_for('add_country') }}" class="btn teal waves-effect waves-light">
+                            Add Country<i class="fas fa-plus-square right"></i>
+                        </a>
                     </div>
+                    <!-- Collection of countries -->
+                    <div class="row center-align">
+                        <ul class="collection">
+                            {% for country in countries %}
+                                <li class="collection-item avatar">
+                                    <img src="{{ country.country_img }}" alt="{{ country.country_name }}" class="circle">
+                                    <span class="title" style="float: left;">{{ country.country_name }}</span>
+                                    <div style="float: right;">
+                                        <a href="" class="btn teal waves-effect waves-light">
+                                            <span>Remove</span>
+                                        </a>
+                                        <a href="" class="btn teal waves-effect waves-light">
+                                            <span>Edit</span>
+                                        </a>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <!-- Collection of countries -->
                     {% endif %}
+                    <!-- Countries section - only visible to admin-->
                 </div>
             </div>
         </div>

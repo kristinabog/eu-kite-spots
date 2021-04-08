@@ -169,7 +169,7 @@ def add_country():
     if request.method == "POST":
         country = {
             "country_name": request.form.get("country_name"),
-            "image_url": request.form.get("image_url")
+            "country_img": request.form.get("image_url")
         }
         mongo.db.countries.insert_one(country)
         flash("New Country Added")
