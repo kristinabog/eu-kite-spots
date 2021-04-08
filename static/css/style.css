@@ -164,7 +164,7 @@ hr.hr-intro {
 /* ---------------- Log In and Sign Up */
 
 .login-container {
-    height: 100vh;
+    min-height: 78vh;
 }
 
 .login-wrap {
