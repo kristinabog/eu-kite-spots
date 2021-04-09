@@ -33,24 +33,28 @@
                     </div>
                     <div class="row center-align">
                         <!-- Display spots of the user -->
-                        <ul class="collection">
-                        {% for spot in spots %}
-                            {% if session.user|lower == spot.created_by|lower %}
-                                <li class="collection-item avatar">
-                                    <img src="{{ spot.spot_image }}" alt="{{ spot.spot_name }}" class="circle">
-                                    <span class="title" style="float: left;">{{ spot.spot_name }}</span>
-                                    <div style="float: right;">
-                                        <a href="{{ url_for('edit_spot', spot_id=spot._id) }}" class="btn teal waves-effect waves-light">
-                                            <span>Edit</span>
-                                        </a>
-                                        <a href="{{ url_for('delete_spot', spot_id=spot._id) }}" class="btn teal waves-effect waves-light">
-                                            <span>Remove</span>
-                                        </a>
-                                    </div>
-                                </li>
-                            {% endif %}
-                        {% endfor %}
-                        </ul>
+                        {% if spots %}
+                            <ul class="collection">
+                                {% for spot in spots %}
+                                    {% if session.user|lower == spot.created_by|lower %}
+                                        <li class="collection-item avatar">
+                                            <img src="{{ spot.spot_image }}" alt="{{ spot.spot_name }}" class="circle">
+                                            <span class="title" style="float: left;">{{ spot.spot_name }}</span>
+                                            <div style="float: right;">
+                                                <a href="{{ url_for('edit_spot', spot_id=spot._id) }}" class="btn teal waves-effect waves-light">
+                                                    <span>Edit</span>
+                                                </a>
+                                                <a href="{{ url_for('delete_spot', spot_id=spot._id) }}" class="btn teal waves-effect waves-light">
+                                                    <span>Remove</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        {% else %}
+                            <p>You have no spots yet.</p>  
+                        {% endif %}
                     </div>
                     <!-- Spots section -->
                     <!-- Countries section - only visible to admin-->

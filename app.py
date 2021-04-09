@@ -83,9 +83,10 @@ def profile(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
+    spots = []
     if session["user"]:
-        spots = list(mongo.db.spots.find())
-        countries = list(mongo.db.countries.find().sort("category_name", 1))
+        spots = list(mongo.db.spots.find({'created_by': username}))
+        countries = list(mongo.db.countries.find().sort("country_name", 1))
         return render_template(
             "profile.html", username=username,
             countries=countries, spots=spots)
