@@ -155,8 +155,10 @@ def edit_spot(spot_id):
 @app.route("/delete_spot/<spot_id>")
 def delete_spot(spot_id):
     mongo.db.spots.remove({"_id": ObjectId(spot_id)})
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
     flash("Spot Successfully Deleted")
-    return redirect(url_for("spots"))
+    return redirect(url_for("profile", username=username))
 
 
 @app.route("/countries")
@@ -192,6 +194,15 @@ def edit_country(country_id):
 
     country = mongo.db.countries.find_one({"_id": ObjectId(country_id)})
     return render_template("edit_country.html", country=country)
+
+
+@app.route("/delete_country/<country_id>")
+def delete_country(country_id):
+    mongo.db.countries.remove({"_id": ObjectId(country_id)})
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    flash("Country Successfully Deleted")
+    return redirect(url_for("profile", username=username))
 
 
 if __name__ == "__main__":
