@@ -45,7 +45,7 @@
                                                     <span>Edit</span>
                                                 </a>
                                                 <a href="{{ url_for('delete_spot', spot_id=spot._id) }}" class="btn teal waves-effect waves-light">
-                                                    <span>Remove</span>
+                                                    <span>Delete</span>
                                                 </a>
                                             </div>
                                         </li>
@@ -79,11 +79,11 @@
                                     <img src="{{ country.country_img }}" alt="{{ country.country_name }}" class="circle">
                                     <span class="title" style="float: left;">{{ country.country_name }}</span>
                                     <div style="float: right;">
-                                        <a href="" class="btn teal waves-effect waves-light">
+                                        <a href="{{ url_for('edit_country', country_id=country._id) }}" class="btn teal waves-effect waves-light">
                                             <span>Edit</span>
                                         </a>
                                         <a href="" class="btn teal waves-effect waves-light">
-                                            <span>Remove</span>
+                                            <span>Delete</span>
                                         </a>
                                     </div>
                                 </li>

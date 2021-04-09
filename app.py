@@ -170,13 +170,28 @@ def add_country():
     if request.method == "POST":
         country = {
             "country_name": request.form.get("country_name"),
-            "country_img": request.form.get("image_url")
+            "country_img": request.form.get("country_img")
         }
         mongo.db.countries.insert_one(country)
         flash("New Country Added")
         return redirect(url_for("countries"))
 
     return render_template("add_country.html")
+
+
+@app.route("/edit_country/<country_id>", methods=["GET", "POST"])
+def edit_country(country_id):
+    if request.method == "POST":
+        submit = {
+            "country_name": request.form.get("country_name"),
+            "country_img": request.form.get("country_img")
+        }
+        mongo.db.countries.update({"_id": ObjectId(country_id)}, submit)
+        flash("Country Successfully Updated")
+        return redirect(url_for("countries"))
+
+    country = mongo.db.countries.find_one({"_id": ObjectId(country_id)})
+    return render_template("edit_country.html", country=country)
 
 
 if __name__ == "__main__":
