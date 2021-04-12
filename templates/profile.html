@@ -6,11 +6,11 @@
                 <div class="card-panel">
                     <!-- Profile section -->
                     <div class="row">
-                        <hr class="hr-profile">
-                        <h3 class="center-align header profile-h-bg">
+                        <hr class="heading-hr">
+                        <h3 class="center-align heading heading-bg">
                             <span>Your Profile</span>
                         </h3>
-                        <hr class="hr-profile">
+                        <hr class="heading-hr">
                     </div>
                     <div class="row center-align">
                         <p>
@@ -20,11 +20,11 @@
                     <!-- Profile section -->
                     <!-- Spots section -->
                     <div class="row">
-                        <hr class="hr-profile">
-                        <h3 class="center-align header profile-h-bg">
+                        <hr class="heading-hr">
+                        <h3 class="center-align heading heading-bg">
                             <span>Your Spots</span>
                         </h3>
-                        <hr class="hr-profile">
+                        <hr class="heading-hr">
                     </div>
                     <div class="row center-align">
                         <a href="{{ url_for('add_spot') }}" class="btn teal waves-effect waves-light">
@@ -60,11 +60,11 @@
                     <!-- Countries section - only visible to admin-->
                     {% if session.user|lower == "admin"|lower %}
                     <div class="row">
-                        <hr class="hr-profile">
-                        <h3 class="center-align header profile-h-bg">
+                        <hr class="heading-hr">
+                        <h3 class="center-align heading heading-bg">
                             <span>Countries</span>
                         </h3>
-                        <hr class="hr-profile">
+                        <hr class="heading-hr">
                     </div>
                     <div class="row center-align">
                         <a href="{{ url_for('add_country') }}" class="btn teal waves-effect waves-light">

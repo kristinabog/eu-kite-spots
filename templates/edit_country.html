@@ -2,9 +2,9 @@
 {% block content %}
 <div class="container">
     <div class="row card-panel col s12 m8 l6">
-        <hr class="hr-profile">
-        <h3 class="header center-align">Edit Country</h3>
-        <hr class="hr-profile" style="margin-bottom: 40px;">
+        <hr class="heading-hr">
+        <h3 class="heading center-align heading-bg">Edit Country</h3>
+        <hr class="heading-hr" style="margin-bottom: 40px;">
         <form class="col s12" method="POST" action="{{ url_for('edit_country', country_id=country._id) }}">
             <!-- country name and image -->
             <div class="row">

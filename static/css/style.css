@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Cormorant+Garamond:wght@600;700&display=swap');
 
 
 /* ------------- General */
@@ -189,15 +188,6 @@ hr.hr-intro {
     border-radius: 5px 0 0 5px;
 }
 
-.header {
-    font-family: 'Cormorant Garamond', sans-serif;
-    font-size: 2.6rem;
-    color:#344c5c;
-    text-transform: uppercase;
-    text-shadow: 1px 0px 1px #344c5c;
-    margin-top: 21.36px;
-}
-
 .hr-login {
     border: 0.1px solid #344c5c;
     width: 80%;
@@ -261,18 +251,27 @@ hr.hr-intro {
     font-weight: 400;
     color: #fff;
     letter-spacing: 0.6px;
-    padding: 5px 10px;
+    padding: 7px 10px;
     border-radius: 5px;
 }
-/*-------------- profile.html */
+/*-------------- Headings */
 
-.profile-h-bg {
+.heading {
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-size: 2.6rem;
+    color:#344c5c;
+    text-transform: uppercase;
+    text-shadow: 1px 0px 1px #344c5c;
+    margin-top: 21.36px;
+}
+
+.heading-bg {
     background:  #d8ebeb;
     padding: 10px;
     margin: 0;
 }
 
-.hr-profile {
+.heading-hr {
     border: 0.1px solid #344c5c;
     margin: 0;
 }
