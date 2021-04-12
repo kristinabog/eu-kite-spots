@@ -12,6 +12,7 @@ body, html {
 
 .gen-container {
     min-height: 92vh;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -276,14 +277,12 @@ hr.hr-intro {
     margin: 0;
 }
 
-/*-------------- spots.html */
-
-.spots-container {
+.blue-container {
     height: 35vh;
     background-color: #d8ebeb; 
-    background-repeat: no-repeat;
-    background-size: cover;
 }
+
+/*-------------- spots.html */
 
 .spot-row {
     margin-top: 30px;
