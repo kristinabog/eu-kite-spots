@@ -31,12 +31,12 @@
             </div>
             <!-- submit button-->
             <div class="row center-align">
-                <a href="{{ url_for('profile', username=session.user) }}" class="btn teal waves-effect waves-light">
-                    <span>Cancel</span>
-                </a>
                 <button type="submit" class="btn teal waves-effect waves-light">
                     <span>Submit</span>
                 </button>
+                <a href="{{ url_for('profile', username=session.user) }}" class="btn teal waves-effect waves-light">
+                    <span>Cancel</span>
+                </a>
             </div>
         </form>
     </div>

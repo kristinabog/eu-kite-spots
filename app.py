@@ -117,7 +117,7 @@ def add_spot():
             "spot_region": request.form.get("spot_region"),
             "spot_level": request.form.get("spot_level"),
             "spot_best_time": request.form.get("spot_best_time"),
-            "spot_description": request.form.get("task_description"),
+            "spot_description": request.form.get("spot_description"),
             "spot_image": request.form.get("spot_image"),
             "spot_location": request.form.get("spot_location"),
             "created_by": session["user"]
@@ -139,7 +139,7 @@ def edit_spot(spot_id):
                 "spot_region": request.form.get("spot_region"),
                 "spot_level": request.form.get("spot_level"),
                 "spot_best_time": request.form.get("spot_best_time"),
-                "spot_description": request.form.get("task_description"),
+                "spot_description": request.form.get("spot_description"),
                 "spot_image": request.form.get("spot_image"),
                 "spot_location": request.form.get("spot_location"),
                 "created_by": session["user"]

@@ -10,9 +10,12 @@ body, html {
     padding: 0;
 }
 
-.gen-container {
-    min-height: 92vh;
+.montserrat {
     font-family: 'Montserrat', sans-serif;
+}
+
+.gen-container {
+    min-height: 92vh; 
 }
 
 
@@ -286,8 +289,38 @@ hr.hr-intro {
 
 .spot-row {
     margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+.spot-col {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card.medium {
+    max-width: 350px;
+    max-height: 350px;
+    position: relative;
+}
+
+.card .card-content {
+    font-size: 12px;
+    padding: 18px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card.small .card-image, .card.medium .card-image, .card.large .card-image {
+    max-height: 188px;
+}
+
+.spot-info {
+    margin-top: 12px;
+}
 /*---------- countries.html */
 
 .country-col {
@@ -302,8 +335,6 @@ hr.hr-intro {
 .country-grid {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-items: center;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
@@ -376,6 +407,11 @@ hr.hr-intro {
 @media only screen and (max-width: 375px) {
     #flash-msg {
         font-size: 16px;
+    }
+
+    .card .card-title {
+        font-size: 17px;
+        font-weight: 400;
     }
 }
 

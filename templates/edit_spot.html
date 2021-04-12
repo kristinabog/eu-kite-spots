@@ -72,18 +72,18 @@
             <div class="row">
                 <div class="input-field col s12">
                     <textarea id="spot_description" name="spot_description"
-                    minlength="5" maxlength="200" class="materialize-textarea validate" required>{{ spot.spot_name }}</textarea>
+                    minlength="5" maxlength="200" class="materialize-textarea validate" required>{{ spot.spot_description }}</textarea>
                     <label for="spot_description">Description</label>
                 </div>
             </div>
             <!-- submit button-->
             <div class="row center-align">
-                <a href="{{ url_for('profile', username=session.user) }}" class="btn teal waves-effect waves-light">
-                    <span>Cancel</span>
-                </a>
                 <button type="submit" class="btn teal waves-effect waves-light">
                     <span>Edit</span>
                 </button>
+                <a href="{{ url_for('profile', username=session.user) }}" class="btn teal waves-effect waves-light">
+                    <span>Cancel</span>
+                </a>
             </div>
         </form>
     </div>
