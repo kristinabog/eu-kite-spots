@@ -14,7 +14,8 @@
 <div class="container center-align montserrat">
     <div class="row country-grid center-align">
         {% for country in countries %}
-            <div class="col country-col valign-wrapper center-align" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('{{ country.country_img }}');">
+            <div class="col country-col valign-wrapper center-align" 
+                style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('{{ country.country_img }}');">
                 <div class="row">
                     <h2 class="country-title">{{ country.country_name }}</h2>
                 </div>

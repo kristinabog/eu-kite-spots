@@ -281,7 +281,7 @@ hr.hr-intro {
 }
 
 .blue-container {
-    height: 35vh;
+    height: 45vh;
     background-color: #d8ebeb; 
 }
 
@@ -307,12 +307,18 @@ hr.hr-intro {
     position: relative;
 }
 
+.card .card-title {
+    font-size: 20px;
+    font-weight: 400;
+}
+
 .card .card-content {
     font-size: 12px;
     padding: 18px;
     justify-content: center;
     align-items: center;
 }
+
 
 .card.small .card-image, .card.medium .card-image, .card.large .card-image {
     max-height: 188px;
@@ -321,6 +327,8 @@ hr.hr-intro {
 .spot-info {
     margin-top: 12px;
 }
+
+
 /*---------- countries.html */
 
 .country-col {
@@ -332,7 +340,6 @@ hr.hr-intro {
     margin-bottom: 5px;
     justify-content: center;
     border-radius: 5px;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -355,8 +362,60 @@ hr.hr-intro {
     font-family: 'Cormorant Garamond', sans-serif;
 }
 
+/* -------- Search bar */
+
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 100% !important;
+    border: 3px solid #00B4CC !important;
+    border-right: none !important;
+    padding: 5px !important;
+    height: 20px !important;
+    border-radius: 5px 0 0 5px !important;
+    outline: none !important;
+    color: #9DBFAF !important;
+  }
+  
+  .searchTerm:focus{
+    color: #00B4CC;
+  }
+  
+  .searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  
 
 /*---------- Media Queries */
+
+@media only screen and (max-width: 1295px) and (min-width: 992px) {
+
+    .card.medium {
+        height: 340px;
+    }
+
+    .card .card-image img {
+        max-height: 144px;
+    }
+
+    .card .card-title {
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
 
 @media only screen and (max-width: 780px) and (min-width: 600px) {
 
