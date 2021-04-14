@@ -212,6 +212,18 @@ def delete_country(country_id):
     return redirect(url_for("profile", username=username))
 
 
+@app.route("/spot/<spot_id>")
+def spot(spot_id):
+    spot = mongo.db.spots.find_one({"_id": ObjectId(spot_id)})
+    return render_template("spot.html", spot=spot)
+
+
+@app.route("/country/<country_id>")
+def country(country_id):
+    country = mongo.db.countries.find_one({"_id": ObjectId(country_id)})
+    return render_template("country.html", country=country)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

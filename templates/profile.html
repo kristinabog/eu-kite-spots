@@ -89,7 +89,7 @@
                             {% for country in countries %}
                                 <li class="collection-item avatar">
                                     <img src="{{ country.country_img }}" alt="{{ country.country_name }}" class="circle">
-                                    <span class="title" style="float: left;">{{ country.country_name }}</span>
+                                    <a href="{{ url_for('country', country_id=country._id) }}" class="title" style="float: left;">{{ country.country_name }}</a>
                                     <div style="float: right;">
                                         <a href="{{ url_for('edit_country', country_id=country._id) }}" class="btn teal waves-effect waves-light">
                                             <span>Edit</span>
