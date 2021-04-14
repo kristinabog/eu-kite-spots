@@ -281,7 +281,7 @@ hr.hr-intro {
 }
 
 .blue-container {
-    height: 45vh;
+    height: 40vh;
     background-color: #d8ebeb; 
 }
 
@@ -326,6 +326,14 @@ hr.hr-intro {
 
 .spot-info {
     margin-top: 12px;
+}
+
+.no-results {
+    font-size: 2rem;
+}
+
+.spots-container {
+    min-height: 50vh;
 }
 
 
