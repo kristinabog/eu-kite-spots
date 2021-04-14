@@ -44,9 +44,20 @@
                                                 <a href="{{ url_for('edit_spot', spot_id=spot._id) }}" class="btn teal waves-effect waves-light">
                                                     <span>Edit</span>
                                                 </a>
-                                                <a href="{{ url_for('delete_spot', spot_id=spot._id) }}" class="btn teal waves-effect waves-light">
+                                                <button data-target="{{ spot._id }}" class="btn teal waves-effect waves-light modal-trigger">
                                                     <span>Delete</span>
-                                                </a>
+                                                </button>
+                                                <!-- delete modal -->
+                                                    <div id="{{ spot._id }}" class="modal">
+                                                        <div class="modal-content">
+                                                            <p>Are you sure you want to delete this spot?</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <a href="{{ url_for('delete_spot', spot_id=spot._id) }}" class="waves-effect white-text waves-green btn-flat teal">Delete</a>
+                                                            <a href="#!" class="modal-close white-text waves-effect waves-green btn-flat teal">Cancel</a>
+                                                        </div>
+                                                    </div>
+                                                <!-- delete modal -->
                                             </div>
                                         </li>
                                     {% endif %}
@@ -55,6 +66,7 @@
                         {% else %}
                             <p>You have no spots yet.</p>  
                         {% endif %}
+                        <!-- Display spots of the user -->
                     </div>
                     <!-- Spots section -->
                     <!-- Countries section - only visible to admin-->
@@ -82,10 +94,21 @@
                                         <a href="{{ url_for('edit_country', country_id=country._id) }}" class="btn teal waves-effect waves-light">
                                             <span>Edit</span>
                                         </a>
-                                        <a href="{{ url_for('delete_country', country_id=country._id) }}" class="btn teal waves-effect waves-light">
+                                        <button data-target="{{ country._id }}" class="btn teal waves-effect waves-light modal-trigger">
                                             <span>Delete</span>
-                                        </a>
-                                    </div>
+                                        </button>
+                                        <!-- delete modal -->
+                                        <div id="{{ country._id }}" class="modal">
+                                            <div class="modal-content">
+                                                <p>Are you sure you want to delete this country?</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <a href="{{ url_for('delete_country', country_id=country._id) }}" class="waves-effect white-text waves-green btn-flat teal">Delete</a>
+                                                <a href="#!" class="modal-close white-text waves-effect waves-green btn-flat teal">Cancel</a>
+                                            </div>
+                                        </div>
+                                        <!-- delete modal -->
+                                    </div> 
                                 </li>
                             {% endfor %}
                         </ul>
