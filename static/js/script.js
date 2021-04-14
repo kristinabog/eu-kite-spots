@@ -39,13 +39,3 @@ $(document).ready(function(){
     }
 });
 
-//function openModal() {
-//    $('#delete-modal').modal('open');
-//}
-
-//function openModal2() {
-//    $('.modal').modal({
-//        dismissible: false
-//      });
-//    $('#delete-modal2').modal('open');
-//}
