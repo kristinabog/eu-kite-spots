@@ -9,13 +9,16 @@
                         <hr class="heading-hr">
                     </div>
                     <div class="row">
-                        <form action="" method="post">
+                        <form action="{{ url_for('search') }}" method="post">
                             <div class="wrap">
                                 <div class="search">
-                                    <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                                    <input type="text" name="query" id="query" minlength="3" class="searchTerm" placeholder="Search for the perfect spot" required>
                                     <button type="submit" class="searchButton">
                                         <i class="fa fa-search"></i>
                                     </button>
+                                    <a href="{{ url_for('spots') }}" class="searchButton reset-btn">
+                                        <i class="fas fa-redo"></i>
+                                    </a>
                                 </div>
                             </div>
                         </form>

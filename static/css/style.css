@@ -372,29 +372,37 @@ hr.hr-intro {
   
   .searchTerm {
     width: 100% !important;
-    border: 3px solid #00B4CC !important;
+    border: 3px solid #344c5c !important;
     border-right: none !important;
     padding: 5px !important;
     height: 20px !important;
     border-radius: 5px 0 0 5px !important;
     outline: none !important;
-    color: #9DBFAF !important;
+    color: #000 !important;
   }
   
   .searchTerm:focus{
-    color: #00B4CC;
+    color: #344c5c;
   }
   
   .searchButton {
     width: 40px;
     height: 36px;
-    border: 1px solid #00B4CC;
-    background: #00B4CC;
+    border: 1px solid #344c5c;
+    background: #344c5c;
     text-align: center;
     color: #fff;
-    border-radius: 0 5px 5px 0;
     cursor: pointer;
     font-size: 20px;
+  }
+
+  .reset-btn {
+    border-radius: 0 5px 5px 0;
+    font-size: 18px;
+  }
+
+  a .fa-redo {
+    line-height: 2;
   }
 
   

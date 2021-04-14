@@ -24,6 +24,13 @@ def home():
     return render_template("home.html")
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    spots = list(mongo.db.spots.find({"$text": {"$search": query}}))
+    return render_template("spots.html", spots=spots)
+
+
 @app.route("/sign_up", methods=["GET", "POST"])
 def sign_up():
     if request.method == "POST":
