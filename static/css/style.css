@@ -8,14 +8,15 @@ body, html {
     background: #f7fbfb;
     margin: 0;
     padding: 0;
-}
-
-.montserrat {
     font-family: 'Montserrat', sans-serif;
 }
 
 .gen-container {
     min-height: 92vh; 
+}
+
+.form-margin {
+    margin: 0px 10px;
 }
 
 
@@ -280,6 +281,10 @@ hr.hr-intro {
     margin: 0;
 }
 
+.hr-margin {
+    margin-bottom: 40px;
+}
+
 .blue-container {
     height: 40vh;
     background-color: #d8ebeb; 
@@ -370,7 +375,7 @@ hr.hr-intro {
     font-family: 'Cormorant Garamond', sans-serif;
 }
 
-/* -------- Search bar */
+/* -------- Search bar -- credit: https://codepen.io/huange/pen/rbqsD */
 
 .search {
     width: 100%;

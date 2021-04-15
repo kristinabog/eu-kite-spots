@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="container">
-    <div class="row card-panel col s12 m8 l6">
+    <div class="card-panel col s12 m8 l6">
         <hr class="heading-hr">
         <h3 class="heading center-align heading-bg">Add Kitesurf spot</h3>
-        <hr class="heading-hr" style="margin-bottom: 40px;">
-        <form class="col s12" method="POST" action="{{ url_for('add_spot') }}">
+        <hr class="heading-hr hr-margin">
+        <form class="col s12 form-margin" method="POST" action="{{ url_for('add_spot') }}">
             <!-- country selection -->
             <div class="row">
                 <div class="input-field col s12 l5">
