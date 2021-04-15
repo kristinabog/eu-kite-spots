@@ -1,5 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
-    <p>{{ country.country_name }}</p>
+<div class="container gen-container">
+    <div class="card-panel col s12 m8 l6 center-align">
+        <div class="row">
+            <hr class="heading-hr">
+            <h3 class="heading center-align heading-bg">{{ country.country_name }}</h3>
+            <hr class="heading-hr hr-margin">
+        </div>
+        <div class="row">
+            <div class="col s12 m6">
+                <img src="{{ country.country_img }}" class="country-img">
+            </div>
+            <div class="col s12 m6">
+                <p>{{ country.country_description }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <p>wind diagram</p>
+        </div>
+        <div class="row">
+            <hr class="heading-hr">
+            <h3 class="heading center-align heading-bg">Map</h3>
+            <hr class="heading-hr hr-margin">
+        </div>
+        <div class="row">
+            <p>map</p>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

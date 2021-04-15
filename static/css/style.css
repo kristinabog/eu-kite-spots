@@ -16,7 +16,7 @@ body, html {
 }
 
 .form-margin {
-    margin: 0px 10px;
+    margin: 10px 0;
 }
 
 
@@ -375,6 +375,13 @@ hr.hr-intro {
     font-family: 'Cormorant Garamond', sans-serif;
 }
 
+/* ------- country.html */
+
+.country-img {
+    max-width: 400px;
+    max-height: 200px;
+}
+
 /* -------- Search bar -- credit: https://codepen.io/huange/pen/rbqsD */
 
 .search {
@@ -504,7 +511,7 @@ hr.hr-intro {
         height: 120vh;
     }
 
-    .header {
+    .heading {
         font-size: 2rem;
     }
 }
