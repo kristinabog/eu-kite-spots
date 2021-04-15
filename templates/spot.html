@@ -1,5 +1,33 @@
 {% extends "base.html" %}
 {% block content %}
-    <p>{{ spot.spot_name }}</p>
+<div class="container gen-container">
+    <div class="card-panel col s12 m8 l6 center-align">
+        <hr class="heading-hr">
+        <h3 class="heading center-align heading-bg">{{ spot.spot_name }}</h3>
+        <p class="heading-bg">By {{ spot.created_by }}</p>
+        <hr class="heading-hr" style="margin-bottom: 40px;">
+        <div class="row">
+            <div class="col s12 m6">
+                <img href="{{ spot.spot_image }}">
+            </div>
+            <div class="col s12 m6">
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m6">
+                <p>Country: {{ spot.country_name }}</p>
+                <p>Region: {{ spot.spot_region }}</p>
+            </div>
+            <div class="col s12 m6">
+                <p>Best time: {{ spot.spot_best_time }}</p>
+                <p>Level: {{ spot.spot_level }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <p>{{ spot.spot_description }}</p>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
