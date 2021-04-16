@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container">
+<div class="container gen-container">
     <div class="card-panel col s12 m8 l6">
         <hr class="heading-hr">
         <h3 class="heading center-align heading-bg">Edit Country</h3>
@@ -11,7 +11,7 @@
                 <div class="input-field col s12 l6">
                     <i class="fas fa-globe-europe prefix teal-text"></i>
                     <input id="country_name" name="country_name" value="{{ country.country_name }}"
-                    minlength="4" maxlength="50" type="text" class="validate" required>
+                        minlength="4" maxlength="50" type="text" class="validate" required>
                     <label for="country_name">Name</label>
                 </div>
                 <div class="input-field col s12 l6">
@@ -21,12 +21,17 @@
                     <span class="helper-text" data-error="Required">Valid image URL</span>
                 </div>
             </div>
-            <!-- description -->
+            <!-- description and wind diagram-->
             <div class="row">
                 <div class="input-field col s12">
-                    <textarea id="country_description" name="country_description"
-                    minlength="5" maxlength="200" class="materialize-textarea validate" required></textarea>
+                    <textarea id="country_description" name="country_description" value="{{ country.country_description }}"
+                        minlength="5" maxlength="330" class="materialize-textarea validate" required></textarea>
                     <label for="country_description">Description</label>
+                </div>
+                <div class="input-field col s12">
+                    <textarea id="country_wind" name="country_wind" value="{{ country.country_wind }}"
+                        minlength="5" class="materialize-textarea validate" required></textarea>
+                    <label for="country_wind">Wind diagram</label>
                 </div>
             </div>
             <!-- submit button-->

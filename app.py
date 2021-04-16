@@ -179,7 +179,9 @@ def add_country():
     if request.method == "POST":
         country = {
             "country_name": request.form.get("country_name"),
-            "country_img": request.form.get("country_img")
+            "country_img": request.form.get("country_img"),
+            "country_description": request.form.get("country_description"),
+            "country_wind": request.form.get("country_wind")
         }
         mongo.db.countries.insert_one(country)
         flash("New Country Added")
@@ -193,7 +195,9 @@ def edit_country(country_id):
     if request.method == "POST":
         submit = {
             "country_name": request.form.get("country_name"),
-            "country_img": request.form.get("country_img")
+            "country_img": request.form.get("country_img"),
+            "country_description": request.form.get("country_description"),
+            "country_wind": request.form.get("country_wind")
         }
         mongo.db.countries.update({"_id": ObjectId(country_id)}, submit)
         flash("Country Successfully Updated")
