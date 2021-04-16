@@ -30,7 +30,7 @@
         </div>
 {% endblock %}
 {% block content %}
-        <div class="container spots-container center-align">
+        <div class="container center-align gen-container">
             {% if spots %}
                 <div class="row center-align spot-row">
                     {% for spot in spots %}
@@ -41,7 +41,7 @@
                                     <img class="activator" src="{{ spot.spot_image }}">
                                 </div>
                                 <div class="card-content">
-                                    <a href="{{ url_for('spot', spot_id=spot._id) }}" class="card-title activator grey-text text-darken-4">{{ spot.spot_name }}<i class="material-icons right">more_vert</i></a>
+                                    <a href="{{ url_for('spot', spot_id=spot._id) }}" class="card-title grey-text text-darken-4">{{ spot.spot_name }}</a>
                                     <p>by {{ spot.created_by }}</p>
                                     <div class="col s12 spot-info">
                                         <p>

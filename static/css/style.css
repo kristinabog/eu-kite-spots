@@ -204,6 +204,16 @@ hr.hr-intro {
     font-size: 2.3rem;
 }
 
+/*----------------- Profile */
+
+.collection .title {
+    float: left;
+}
+
+.collection .edit-remove-btns {
+    float: right;
+}
+
 /*----------------- Footer */
 
 .page-footer {
@@ -314,7 +324,11 @@ hr.hr-intro {
 
 .card .card-title {
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 500;
+}
+
+.card-content a:hover {
+    background-color: #d8ebeb;
 }
 
 .card .card-content {
@@ -323,7 +337,6 @@ hr.hr-intro {
     justify-content: center;
     align-items: center;
 }
-
 
 .card.small .card-image, .card.medium .card-image, .card.large .card-image {
     max-height: 188px;
@@ -337,10 +350,25 @@ hr.hr-intro {
     font-size: 2rem;
 }
 
-.spots-container {
-    min-height: 50vh;
+.card .card-reveal {
+    text-align: justify;
 }
 
+/*---------- spot.hmtl */
+
+.spot-img {
+    max-width: 400px;
+    max-height: 300px;
+}
+
+.spot-des {
+    text-align: justify;
+    margin: 0 15%;
+}
+
+.bold {
+    font-weight: 600;
+}
 
 /*---------- countries.html */
 
@@ -463,8 +491,25 @@ hr.hr-intro {
     }
 
     .card .card-title {
-        font-size: 14px;
+        font-size: 18px;
         font-weight: 500;
+    }
+
+    .card .card-reveal {
+        font-size: 13px;
+    }
+
+    .card .card-reveal .card-title {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .card .card-reveal .btn {
+        height: 30px;
+        line-height: 31px;
+        font-size: 11px;
+        width: 51px;
+        padding: 0;
     }
 }
 
@@ -534,6 +579,14 @@ hr.hr-intro {
     #wind-img {
         max-width: 320px;
     }
+
+    .edit-remove {
+        height: 30px;
+        line-height: 31px;
+        font-size: 11px;
+        width: 51px;
+        padding: 0;
+    }
 }
 
 
@@ -563,6 +616,14 @@ hr.hr-intro {
 
     #wind-img {
         max-width: 250px;
+    }
+
+    .collection .title {
+        float: none;
+    }
+    
+    .collection .edit-remove-btns {
+        float: none;
     }
 }
 
