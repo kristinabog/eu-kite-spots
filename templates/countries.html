@@ -11,7 +11,7 @@
         </div>
 {% endblock %}
 {% block content %}
-<div class="container center-align montserrat">
+<div class="container center-align gen-container">
     <div class="row country-grid center-align">
         {% for country in countries %}
             <a href="{{ url_for('country', country_id=country._id) }}" class="col country-col valign-wrapper center-align" 
