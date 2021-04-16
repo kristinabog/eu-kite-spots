@@ -12,7 +12,7 @@ body, html {
 }
 
 .gen-container {
-    min-height: 92vh; 
+    min-height: 96vh; 
 }
 
 .form-margin {
@@ -377,9 +377,21 @@ hr.hr-intro {
 
 /* ------- country.html */
 
-.country-img {
-    max-width: 400px;
-    max-height: 200px;
+.country-info {
+    text-align: justify;
+}
+
+.wind-season {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 30px 0;
+}
+
+#wind-img {
+    max-width: 490px;
+    max-height: 260px;
+    margin-bottom: 50px;
 }
 
 /* -------- Search bar -- credit: https://codepen.io/huange/pen/rbqsD */
@@ -486,6 +498,10 @@ hr.hr-intro {
     .login-right {
         height: 10rem;
     }
+
+    #wind-img {
+        max-width: 410px;
+    }
 }
 
 
@@ -514,6 +530,10 @@ hr.hr-intro {
     .heading {
         font-size: 2rem;
     }
+
+    #wind-img {
+        max-width: 320px;
+    }
 }
 
 
@@ -539,6 +559,10 @@ hr.hr-intro {
     #logo {
         margin-top: 5px;
         max-width: 80%;
+    }
+
+    #wind-img {
+        max-width: 250px;
     }
 }
 

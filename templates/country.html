@@ -5,22 +5,26 @@
         <div class="row">
             <hr class="heading-hr">
             <h3 class="heading center-align heading-bg">{{ country.country_name }}</h3>
-            <hr class="heading-hr hr-margin">
+            <hr class="heading-hr">
         </div>
         <div class="row">
-            <div class="col s12 m6">
-                <img src="{{ country.country_img }}" class="country-img">
-            </div>
-            <div class="col s12 m6">
+            <div class="col s12 m8 offset-m2 country-info">
                 <p>{{ country.country_description }}</p>
             </div>
         </div>
         <div class="row">
-            <p>wind diagram</p>
+            <h4 class="wind-season">Wind Season</h4>
+            {% if country.country_wind %}
+                <img src="{{ country.country_wind }}" id="wind-img">
+            {% else %}
+                {% if country.country_name == 'Spain' %}
+                    <p>All year varied</p>
+                {% endif%}
+            {% endif %}
         </div>
         <div class="row">
             <hr class="heading-hr">
-            <h3 class="heading center-align heading-bg">Map</h3>
+            <h3 class="heading center-align heading-bg">Kitespots</h3>
             <hr class="heading-hr hr-margin">
         </div>
         <div class="row">
