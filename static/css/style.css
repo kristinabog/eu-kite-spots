@@ -480,6 +480,15 @@ hr.hr-intro {
     text-align: center;
     margin-bottom: 15px;
 }
+
+/*----------- Error */
+
+.error-img {
+    margin-top: 40px;
+    border-radius: 5px;
+    max-width: 100%;
+    height: auto;
+}
   
 
 /*---------- Media Queries */

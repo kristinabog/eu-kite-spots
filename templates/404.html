@@ -1,3 +1,13 @@
 {% extends "base.html" %}
-    <h1>404 Oepsie</h1>
+{% block content %}
+<div class="container center-align gen-container">
+    <div class="row">
+        <img src="../static/img/404.png" alt="404 image" class="error-img">
+    </div>
+    <div class="row">
+        <a href="{{ url_for('home') }}" class="btn teal waves-effect waves-light">
+            <span>Go Back</span>
+        </a>
+    </div>
+</div>
 {% endblock %}
