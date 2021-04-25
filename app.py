@@ -229,6 +229,11 @@ def country(country_id):
     return render_template("country.html", country=country, spot=spot)
 
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template("404.html"), 404
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
