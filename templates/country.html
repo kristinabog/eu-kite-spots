@@ -34,3 +34,15 @@
 </div>
 
 {% endblock %}
+{% block locations %}
+<script>
+    var locations = [{
+        {% for spot in spots %}
+            {% if spot.country_name|lower == country.country_name|lower %}
+                lat: {{ spot.spot_location.lat}},
+                lng: {{ spot.spot_location.lng}}
+            {% endif %}
+        {% endfor %}
+    }];
+</script>
+{% endblock %}
