@@ -34,23 +34,3 @@
 </div>
 
 {% endblock %}
-{% block locations %}
-<script>
-    var spots = document.getElementsByClassName('spot-name');
-    console.log(spots);
-    var country = document.getElementById('country-name');
-    console.log(country);
-    var spots = [];
-    var i;
-    
-    for (i = 0; i < spots.length; i++) {
-        spots[i];
-        if (spots[0] == country) {
-            var locations = [{
-            lat: spots[8][0],
-            lng: spots[8][1]
-        }];
-        }
-    };
-</script>
-{% endblock %}
