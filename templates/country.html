@@ -4,7 +4,7 @@
     <div class="card-panel col s12 m8 l6 center-align">
         <div class="row">
             <hr class="heading-hr">
-            <h3 class="heading center-align heading-bg">{{ country.country_name }}</h3>
+            <h3 class="heading center-align heading-bg"><span id="country-name">{{ country.country_name }}</span></h3>
             <hr class="heading-hr">
         </div>
         <div class="row">
@@ -36,13 +36,21 @@
 {% endblock %}
 {% block locations %}
 <script>
-    var locations = [{
-        {% for spot in spots %}
-            {% if spot.country_name|lower == country.country_name|lower %}
-                lat: {{ spot.spot_location.lat}},
-                lng: {{ spot.spot_location.lng}}
-            {% endif %}
-        {% endfor %}
-    }];
+    var spots = document.getElementsByClassName('spot-name');
+    console.log(spots);
+    var country = document.getElementById('country-name');
+    console.log(country);
+    var spots = [];
+    var i;
+    
+    for (i = 0; i < spots.length; i++) {
+        spots[i];
+        if (spots[0] == country) {
+            var locations = [{
+            lat: spots[8][0],
+            lng: spots[8][1]
+        }];
+        }
+    };
 </script>
 {% endblock %}

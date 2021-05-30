@@ -224,9 +224,9 @@ def spot(spot_id):
 
 @app.route("/country/<country_id>")
 def country(country_id):
-    spot = mongo.db.spots.find()
+    spots = mongo.db.spots.find()
     country = mongo.db.countries.find_one({"_id": ObjectId(country_id)})
-    return render_template("country.html", country=country, spot=spot)
+    return render_template("country.html", country=country, spots=spots)
 
 
 @app.errorhandler(404)
