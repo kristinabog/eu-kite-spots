@@ -361,9 +361,9 @@ hr.hr-intro {
 /*---------- spot.hmtl */
 
 .spot-img {
-    max-width: 400px;
-    max-height: 300px;
+    border-radius: 5px;
 }
+
 
 .spot-des {
     text-align: justify;
@@ -643,5 +643,9 @@ hr.hr-intro {
 @media only screen and (max-width: 300px) {
     .login-wrap {
         width: 18rem;
-    }   
+    }
+    
+    #wind-img {
+        max-width: 200px;
+    }
 }
