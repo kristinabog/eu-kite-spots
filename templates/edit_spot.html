@@ -55,17 +55,11 @@
             </div>
             <!-- image and location -->
             <div class="row">
-                <div class="input-field col s12 l6">
+                <div class="input-field col s12">
                     <input id="spot_image" name="spot_image" type="text" 
                         class="validate" value="{{ spot.spot_image }}" required>
                     <label for="spot_image">Image URL</label>
                     <span class="helper-text" data-error="Required">Valid image URL</span>
-                </div>
-                <div class="input-field col s12 l6">
-                    <input id="spot_location" name="spot_location" type="text" 
-                        class="validate" value="{{ spot.spot_location }}" required>
-                    <label for="spot_location">Location Coordinates</label>
-                    <span class="helper-text" data-error="Required">Map coordinates</span>
                 </div>
             </div>
             <!-- description -->
