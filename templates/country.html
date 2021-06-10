@@ -1,35 +1,40 @@
 {% extends "base.html" %}
-{% block content %}
-<div class="container gen-container">
-    <div class="card-panel col s12 m8 l6 center-align">
-        <div class="row">
-            <hr class="heading-hr">
-            <h3 class="heading center-align heading-bg"><span id="country-name">{{ country.country_name }}</span></h3>
-            <hr class="heading-hr">
-        </div>
-        <div class="row">
-            <div class="col s12 m8 offset-m2 country-info">
-                <p>{{ country.country_description }}</p>
+{% block header %}
+        <div class="blue-container valign-wrapper">
+            <div class="row center-align" id="row-home">
+                <div class="col">
+                    <hr class="heading-hr">
+                    <h1 class="heading">{{ country.country_name }}</h1>
+                    <hr class="heading-hr">
+                </div>
             </div>
         </div>
-        <div class="row">
-            <h4 class="wind-season">Wind Season</h4>
-            {% if country.country_wind %}
-                <img src="{{ country.country_wind }}" id="wind-img">
-            {% else %}
-                {% if country.country_name == 'Spain' %}
-                    <p>All year varied</p>
-                {% endif%}
+        <div>
+            <div class="row center-align">
+                <div class="col s12 m5">
+                    <p class="country-info">{{ country.country_description }}</p>
+                </div>
+                <div class="col s12 m7">
+                    <h4 class="wind-season">Wind Season</h4>
+                    {% if country.country_wind %}
+                        <img src="{{ country.country_wind }}" id="wind-img">
+                    {% else %}
+                        {% if country.country_name == 'Spain' %}
+                            <p>All year varied</p>
+                        {% endif%}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+{% endblock %}
+{% block content %}
+<div class="container gen-container">
+    <div class="row center-align">
+        {% for spot in spots %}
+            {% if country.country_name == spot.country_name %}
+                <p>{{ spot.spot_name }}</p>
             {% endif %}
-        </div>
-        <div class="row">
-            <hr class="heading-hr">
-            <h3 class="heading center-align heading-bg">Kitespots</h3>
-            <hr class="heading-hr hr-margin">
-        </div>
-        <div class="row center-align">
-            <div id="map"></div>
-        </div>
+        {% endfor %}
     </div>
 </div>
 
