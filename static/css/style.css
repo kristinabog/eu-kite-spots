@@ -428,6 +428,10 @@ hr.hr-intro {
     margin-bottom: 50px;
 }
 
+.cntry-info-bg {
+    background-color: #eff7f7;
+}
+
 /* -------- Search bar -- credit: https://codepen.io/huange/pen/rbqsD */
 
 .search {
