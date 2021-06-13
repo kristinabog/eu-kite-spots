@@ -412,7 +412,7 @@ hr.hr-intro {
 .country-info {
     text-align: center;
     font-size: 14px;
-    margin: 40px 30px;
+    margin: 30px 50px 30px 80px;
 }
 
 .wind-season {
@@ -528,6 +528,19 @@ hr.hr-intro {
     }
 }
 
+@media only screen and (max-width: 900px) {
+
+    #wind-img {
+        max-width: 350px;
+    }
+
+    .country-info {
+        text-align: justify;
+        font-size: 14px;
+        margin: 30px 30px 30px 30px;
+    } 
+}
+
 @media only screen and (max-width: 780px) and (min-width: 600px) {
 
     .login-wrap {
@@ -557,10 +570,6 @@ hr.hr-intro {
 
     .login-right {
         height: 10rem;
-    }
-
-    #wind-img {
-        max-width: 410px;
     }
 }
 
@@ -630,7 +639,7 @@ hr.hr-intro {
     }
 
     #wind-img {
-        max-width: 250px;
+        max-width: 340px;
     }
 
     .collection .title {
@@ -642,7 +651,7 @@ hr.hr-intro {
     }
 }
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 325px) {
     .login-wrap {
         width: 18rem;
     }
