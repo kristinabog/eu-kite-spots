@@ -556,8 +556,9 @@ hr.hr-intro {
 @media only screen and (max-width: 600px) {
     .login-wrap {
         display: block;
-        width: 20rem;
+        width: 22rem;
         height: 43rem;
+        margin-top: 20px;
     }
 
     .login-bg {
@@ -611,6 +612,10 @@ hr.hr-intro {
         width: 51px;
         padding: 0;
     }
+
+    .country-col {
+        width: 20rem;
+    }
 }
 
 
@@ -651,12 +656,23 @@ hr.hr-intro {
     }
 }
 
-@media only screen and (max-width: 325px) {
+@media only screen and (max-width: 326px) {
     .login-wrap {
-        width: 18rem;
+        width: 20rem;
     }
     
     #wind-img {
         max-width: 200px;
     }
 }
+
+@media only screen and (max-width: 300px) {
+    .login-wrap {
+        width: 18rem;
+    }
+
+    .country-col {
+        width: 17rem;
+    }
+}
+
