@@ -41,6 +41,12 @@ to find on the internet. With this website kitesurfers, beginner to expert, can 
     4. Get feedback for adding, editing, logging in and logging out.
     5. Get an error messages in case I have done something wrong or there is an issue with the database.
 
+- As an admin I want to be able:
+
+    to access, edit and delete ALL spots and countries from the admin profile
+
+
+
 
 
 ### Strategy
@@ -63,7 +69,9 @@ In the footer you will find the general navigation links. And on the left side y
 ### Surface
 
 #### Colour Scheme
-Shades of teal, dark blue shade #344c5c, and white are chosen for the color scheme as it goes along with all the pictures of the kitesurf spots.
+Shades of teal, dark blue shade, and white are chosen for the color scheme as it goes along with all the pictures of the kitesurf spots.
+
+![Color Palette](static/img/color-palette.png)
 
 #### Typography
 Montserrat is used as the general font-size of the website for it's clean typography and suitability with the logo. 
@@ -81,7 +89,31 @@ The home page has a gif with someone kitesurfing, so visitors can see the sport 
     - log in and sign up page
     - Spots page
     - Countries page
-- Database diagram
+
+## Features
+
+Note:
+Original plan was to implement a google maps API that will show all spots on a map on the spots template and
+on the country pages displaying all the spots per country. But because of a lot of
+unsuccesfull attempts trying to find solutions on how to implement google masp API and connect it to
+the mongoDB Database, I decided to leave this out for this project.
+
+### Existing Features
+    - 
+
+### Future Features
+    - Google maps API for all the spots to be displaying on
+    - Password reset
+    - More profile information to add and ability to edit them
+    - SSL certificate
+    - Registration with email or through Google
+    - Page loading animation
+    - Pagination on the spots page
+    - Sort spots by region, experience and kitesurf season
+    
+
+## Information Architecture
+MongoDB Atlas was used for storing data
 
 ## Technologies Used
 
@@ -126,8 +158,6 @@ The home page has a gif with someone kitesurfing, so visitors can see the sport 
 18. [Werkzeug:](https://werkzeug.palletsprojects.com/en/2.0.x/)
     Werkzeug was used for password hashing in this project
 
-
-
 ## Testing
 ## Deployment
 
@@ -137,6 +167,8 @@ The home page has a gif with someone kitesurfing, so visitors can see the sport 
 
 - The python code in app.py was inspired by the task manager app mini project from Code Institute 
 - Materialize: styling, responsiveness, nav bar, footer, card panels, cards, buttons, modal, text inputs and the icons in the log in and sign up forms.
+- [Fade in effect home page](https://stackoverflow.com/questions/11679567/using-css-for-a-fade-in-effect-on-page-load)
+- [Search bar](https://codepen.io/huange/pen/rbqsD)
 
 ### Video
 
@@ -146,11 +178,17 @@ Found on Youtube.com searching with a Creative common filter
 
 ### Images
 
-From Pixabay:
+Log in and sign up template:
 - [Log in and sign up side picture](https://pixabay.com/photos/kite-surfing-kitesurfing-sea-3857693/)
-- [Background of header in profile page](https://pixabay.com/photos/blue-lights-background-2852879/)
 
-Other:
+Countries.html:
+- [Greece](https://globalkitespots.com/wp-content/uploads/Greece-wind.png)
+- [Italy](https://images.pexels.com/photos/417239/pexels-photo-417239.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)
+- [Portugal](https://cdn.pixabay.com/photo/2017/09/08/00/25/sea-2727251__340.jpg)
+- [Spain](https://cdn.pixabay.com/photo/2014/08/19/13/01/sand-castle-421483__340.jpg)
+- [Wind diagrams](https://globalkitespots.com/)
+
+Spots:
 - [Royal Sands Marmari Surf Club](https://photos.tpn.to/rs/os/oh/qi/653x490.jpg)
 - [Playa De Sotavento](https://www.kiteworldmag.com/wp-content/uploads/2015/01/reneegli_zones-pic-by-kerstin-reiger.jpg)
 - [La Cinta Sardinia](https://media.istockphoto.com/photos/spiaggia-la-cinta-kite-and-surf-beach-sardinia-italy-picture-id1064631184?k=6&m=1064631184&s=170667a&w=0&h=tpZGgR_Ok7mJSMRw4BN9nlvi4LCPsgAm2qLaT0iro4k=)
