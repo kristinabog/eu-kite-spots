@@ -30,7 +30,8 @@ to find on the internet. With this website kitesurfers, beginner to expert, can 
     3. Be able to look up kitesurf spots by name, region.
     4. Be able to browse kitesurf spots by country.
     5. Access the website on mobile and desktop and for it to be responsive.
-    6. find the kitesurf spots on a map and by clicking them it will take me to the individual kitesurf spot page.
+    6. Find more info about a kitespot when I click on it in the list of kitespots
+    7. Find info about the country and their windseason.
 
 - As a member I want to:
 
@@ -47,18 +48,17 @@ The goal of this website is so kitesurfers easily can find a website where they 
 
 ### Scope
 After looking around on the internet, you can find websites about kitesurfing in general and with popular spots around the world but nowhere
-can you find a website where you can add your own. This is what this website will specialize in. This way also experienced kitesurfers can share their
+can you find a website where you can add your own and share it with other skitesurfers. This is what this website will specialize in. This way also experienced kitesurfers can share their
 less touristic known spots to other kitesurfers around the world.
 
 ### Structure
 Visitors are welcomed with an image to amaze them and see a kitesurfer in action. This give them the immediate idea what the website is about.
 As they scroll down they will see an actual description of what the website is about and what kitesurfing is.
-The log in and sign up page will have a similar clean look. There is 1 page where you can browse through all the kitesurf spots by name, region or country.
-At the bottom of the page there will be a map with pins that represent all of the kitesurf spots added on the website. When you click on one of the pins
-it will take you to the spot's individual page. On 'countries.html' you can choose in between picture buttons, 1 for every country. When you click on one
-of the countries it will take you to a page with a brief description of the country and a all kitesurf spots with a map. 
+The log in and sign up page will have a similar clean look. There is 1 page where you can browse through all the kitesurf spots by name, region or country. When you click on a spot, you will be redirected to an individual page of that spot with all the info
+There is also a page where you can look up spots by country.
+When you click on one of the countries it will take you to a page with a brief description of the country and a all kitesurf spots in that country. 
 When you sign up as a member you will be able to have a profile and a button in the navbar to add a kitesurf spot.
-In the footer you will find the general navigation links with a contact link that will open in a modal. And on the left side you will find all the social media links.
+In the footer you will find the general navigation links. And on the left side you will find all the social media links.
 
 ### Surface
 
@@ -101,9 +101,8 @@ The home page has a gif with someone kitesurfing, so visitors can see the sport 
     was used to import the font-family 'Montserrat' and 'Cormorant Garamond' into the style.css file.
 3. [Font Awesome:](https://fontawesome.com/)
     was used to add social media icons in the footer.
-4. Flask, Jinja, Werkzeug security:
-    Micro web frameworks written in Python. 
-    Was used for the easier transition in between templates and werkzeug for the password security.
+4. [Flask:](https://flask.palletsprojects.com/en/2.0.x/)
+    Flask is the web framework used to provide libraries, tools and technologies for the app.
 5. [Git:](https://git-scm.com/)
     was used for version control. In the terminal of Gitpod, I used Git to add and commit to Git and after pushing it to Github.
 6. [GitHub:](https://github.com/)
@@ -122,6 +121,12 @@ The home page has a gif with someone kitesurfing, so visitors can see the sport 
     was used to download the youtube video used for the gif.
 16. [JQuery:](https://jquery.com/)
     was used for the interactive elements from Materialize.
+17. [Jinja:](https://jinja.palletsprojects.com/en/3.0.x/)
+    Jinja was used for templating Python
+18. [Werkzeug:](https://werkzeug.palletsprojects.com/en/2.0.x/)
+    Werkzeug was used for password hashing in this project
+
+
 
 ## Testing
 ## Deployment
@@ -149,6 +154,10 @@ Other:
 - [Royal Sands Marmari Surf Club](https://photos.tpn.to/rs/os/oh/qi/653x490.jpg)
 - [Playa De Sotavento](https://www.kiteworldmag.com/wp-content/uploads/2015/01/reneegli_zones-pic-by-kerstin-reiger.jpg)
 - [La Cinta Sardinia](https://media.istockphoto.com/photos/spiaggia-la-cinta-kite-and-surf-beach-sardinia-italy-picture-id1064631184?k=6&m=1064631184&s=170667a&w=0&h=tpZGgR_Ok7mJSMRw4BN9nlvi4LCPsgAm2qLaT0iro4k=)
+- [Bolonia](https://t4.ftcdn.net/jpg/00/05/41/15/360_F_5411543_IKg1nDJJjvvbRvUXaSrgyTTeKYO41Ou9.jpg)
+- [Mikri Vigla](https://img.theculturetrip.com/768x/smart/wp-content/uploads/2020/08/kitesurfing-in-mikri-vigla-beach-on-naxos-island-greece.jpg)
+- [Cabadelo](https://blog.bstoked.net/wp-content/uploads/2018/04/kiteboarding-in-portugal.jpg)
+- [Favicon](https://icon-library.com/icon/kitesurf-icon-3.html)
 
 ### Content
 
@@ -156,4 +165,7 @@ Other:
 - [Description Marmari Surf Club](https://www.worldpackers.com/locations/royal-sands-marmari-surf-club#:~:text=Time%201%20day-,Royal%20Sands%20Marmari%20Surf%20Club,experience%20for%20all%20our%20team.)
 - [Description Playa De Sotavento](https://www.kiteworldmag.com/travel/sotavento-fuerteventura/)
 - [Description La Cinta Sardinia](http://www.sardinianbeaches.com/best-kitesurfing-beaches-of-sardinia/)
+- [Description Bolonia](https://wakeupstoked.com/kitesurf-tarifa-spain/)
+- [Description Mikri Vigla](https://theculturetrip.com/europe/greece/articles/where-to-go-windsurfing-and-kitesurfing-in-naxos/)
+- [Description Cadabelo](https://blog.bstoked.net/locations/top-5-kitesurfing-spots-in-portugal-new-in-2018/)
 
