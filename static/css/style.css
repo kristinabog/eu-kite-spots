@@ -362,6 +362,7 @@ hr.hr-intro {
 
 .spot-img {
     border-radius: 5px;
+    max-height: 400px;
 }
 
 
@@ -623,9 +624,9 @@ hr.hr-intro {
 }
 
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 380px) {
     #flash-msg {
-        font-size: 16px;
+        font-size: 11px;
     }
 
     .card .card-title {
