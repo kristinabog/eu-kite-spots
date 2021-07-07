@@ -47,8 +47,6 @@ to find on the internet. With this website kitesurfers, beginner to expert, can 
 
 
 
-
-
 ### Strategy
 The goal of this website is so kitesurfers easily can find a website where they can find the latest popular kitesurf spots or share them.
 
@@ -99,8 +97,17 @@ unsuccesfull attempts trying to find solutions on how to implement google masp A
 the mongoDB Database, I decided to leave this out for this project.
 
 ### Existing Features
-    - 
-
+    - Log in
+    - Register for an account
+    - Search bar to look up spots by name and region with reset button. If nothing found will return 'No results'
+    - Adding, editing and removing of spots in the profile only by registered users
+    - Adding, editing and/or removing countries only by admin
+    - Flash messages after every login, logout, add, edit and removal
+    - Profile page displays username
+    - Spot and countries have their own page
+    - Input field validation in the forms
+    - Responsive on all devices
+    
 ### Future Features
     - Google maps API for all the spots to be displaying on
     - Password reset
@@ -159,6 +166,100 @@ MongoDB Atlas was used for storing data
     Werkzeug was used for password hashing in this project
 
 ## Testing
+
+### Validators
+
+The following validators were used to make sure there were no syntax errors in the project.
+
+### Testing User Stories from User Experience (UX) Section
+
+- #### As a First Time User I want to
+    1. Find an explanation of the website and about what kitesurfing is.
+
+    The explanation is showing on the home page.
+
+
+    2. Be able to sign up and have my own profile.
+
+    When you click in the nav bar on sign up you will get the following form
+
+    3. Be able to look up kitesurf spots by name, region.
+
+    In the search bar you can enter any name or region to find the kitesurf spot. You can also reset your search.
+
+    4. Be able to browse kitesurf spots by country.
+
+    When you click on countries in the navbar it will take you to a page with all the countries listed with pictures
+
+    5. Access the website on mobile and desktop and for it to be responsive.
+
+    Everything is made repsonsive and accessible on mobile devices as well
+
+    6. Find more info about a kitespot when I click on it in the list of kitespots
+
+    When you click on the name in the card, it will take you to an individual page about the spot. If clicked on the picture
+    it will show you the description of the spot.
+
+    7. Find info about the country and their windseason.
+
+    When you click on one of the countries it will take you to the individual page of the country with a description, wind season table and the spots in the country.
+
+
+- #### As a member I want to
+    1. Be able to add my own kitesurf spots.
+
+    To make it very accessible and easy to add a spot there are 2 ways. One link the navbar and a link in your profile.
+
+    2. Log in with user friendly form.
+
+    When you click on log in in the navbar it will take you to the log in page.
+
+    3. Edit and delete my own kitesurf spots.
+
+    In your profile you will be able to see all of your spots listed and with edit and delete options next to every spot.
+
+    4. Get feedback for adding, editing, logging in and logging out.
+
+    Everytime you add, edit, delete, log in or log out, there will be a flash message.
+
+    5. Get an error messages in case I have done something wrong or there is an issue with the database.
+
+    In case with an error the following error page will display with a link to go back to the home page.
+
+- #### As an admin I want to be able:
+
+    1. To access, edit and delete ALL spots and countries from the admin profile
+
+    The admin's profile page will also have all the countries listed that the admin can edit and delete in the same
+    way as with the spots.
+
+
+### Manual Testing
+
+### Further Testing
+
+-   The Website was tested on Google Chrome, Microsoft Edge and Safari browsers.
+-   The website was tested on all device sizes that are viewable in DevTools.
+-   Family members and friends were asked to test the website on their devices.
+-   The website was viewed on a variety of devices:
+
+    Desktop:
+    - HP Spectre Notebook
+    - Sony VAIO Fit15E (laptop)
+    - Acer Predator G5900 (computer)
+    - ASUS 18363 (computer) 
+    - ASUS N73S (laptop)
+
+    Mobile:
+    - Samsung Galaxy A41
+    - Samsung Galaxy S7 2017
+    - Samsung Galaxy A70
+    - Huawei Y60 2018
+    - Huawei P30 Pro
+    - Xiaomi mi 9 SE
+
+### Known Bugs
+
 ## Deployment
 
 ## Credits
