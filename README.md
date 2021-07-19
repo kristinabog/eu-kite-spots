@@ -263,7 +263,24 @@ The following validators were used to make sure there were no syntax errors in t
         ![screenshot16](static/img/screenshot16.png)
 
 
-### Manual Testing
+### Functional Testing
+
+| Action        | Expected Behaviour         | Pass/Fail  |
+| ------------- |:-------------:| -----:|
+| Click on the nav buttons| Brings you to the page | Pass |
+| `Spots.html` |||
+| Fill in something in the search bar | Returns a spot or 'No Results Found' | Pass |
+| Click the reset button | Page shows all spots again | Pass |
+| `Countries.html` |||
+| Click on one of the country images | Redirects you to individual country page | Pass |
+| `Log_in.html` |||
+| Fill in existing username and password | Logs in and shows the profile | Pass |
+| Fill in non existing username and password | Shows flash message "Incorrect username and/or Password" | Pass |
+| `Sign_up.html` |||
+| Fill in username and password with min. 5 characters | Logs in and shows the profile with flash message "Account created" | Pass |
+| Fill in username and passwword with less than 5 characters | Will show required under input field with info why | Pass |
+
+
 
 ### Further Testing
 
