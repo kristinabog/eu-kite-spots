@@ -176,62 +176,91 @@ The following validators were used to make sure there were no syntax errors in t
 - #### As a First Time User I want to
     1. Find an explanation of the website and about what kitesurfing is.
 
-    The explanation is showing on the home page.
-
+        The explanation about the website and about what kitesurfing is, is showing on the home page.
+        
+        ![screenshot1](static/img/screenshot1.png)
 
     2. Be able to sign up and have my own profile.
 
-    When you click in the nav bar on sign up you will get the following form
+        When you click in the nav bar on sign up you will get the following form
+        
+        ![screenshot2](static/img/screenshot2.png)
 
     3. Be able to look up kitesurf spots by name, region.
 
-    In the search bar you can enter any name or region to find the kitesurf spot. You can also reset your search.
+        In the search bar you can enter any name or region to find the kitesurf spot. You can also reset your search.
+        
+        ![screenshot3](static/img/screenshot3.png)
 
     4. Be able to browse kitesurf spots by country.
 
-    When you click on countries in the navbar it will take you to a page with all the countries listed with pictures
+        When you click on countries in the navbar it will take you to a page with all the countries listed with pictures
+        
+        ![screenshot4](static/img/screenshot4.png)
 
     5. Access the website on mobile and desktop and for it to be responsive.
 
-    Everything is made repsonsive and accessible on mobile devices as well
+        The website is repsonsive and accessible on mobile devices.
+        
+        ![screenshot5](static/img/screenshot5.png)
 
     6. Find more info about a kitespot when I click on it in the list of kitespots
 
-    When you click on the name in the card, it will take you to an individual page about the spot. If clicked on the picture
-    it will show you the description of the spot.
+        When you click on the name in the card, it will take you to an individual page about the spot. If clicked on the picture
+        it will show you the description of the spot.
+        
+        ![screenshot6](static/img/screenshot6.png)
+        ![screenshot7](static/img/screenshot7.png)
 
-    7. Find info about the country and their windseason.
+    7. Find info about the country and their wind season.
 
-    When you click on one of the countries it will take you to the individual page of the country with a description, wind season table and the spots in the country.
+        When you click on one of the countries it will take you to the individual page of the country with a description, wind season table and the spots in the country.
+        
+        ![screenshot8](static/img/screenshot8.png)
 
 
 - #### As a member I want to
     1. Be able to add my own kitesurf spots.
 
-    To make it very accessible and easy to add a spot there are 2 ways. One link the navbar and a link in your profile.
+        To make it very accessible and easy to add a spot, there are 2 ways. One link in the navbar and a link in your profile.
+        
+        ![screenshot9](static/img/screenshot9.png)
+        ![screenshot10](static/img/screenshot10.png)
 
     2. Log in with user friendly form.
 
-    When you click on log in in the navbar it will take you to the log in page.
+        When you click on log in in the navbar it will take you to the log in page.
+        
+        ![screenshot14](static/img/screenshot14.png)
 
     3. Edit and delete my own kitesurf spots.
 
-    In your profile you will be able to see all of your spots listed and with edit and delete options next to every spot.
+        In your profile you will be able to see all of your spots listed and with edit and delete options next to every spot.
+        But also in the list of spots on spots.html, when you click on the picture of one the search results, you will also find edit and delete buttons if it is a spot your account has added.
+        
+        ![screenshot11](static/img/screenshot11.png)
+        ![screenshot12](static/img/screenshot12.png)
+
 
     4. Get feedback for adding, editing, logging in and logging out.
 
-    Everytime you add, edit, delete, log in or log out, there will be a flash message.
+        Everytime you add, edit, delete, log in or log out, there will be a flash message.
+        
+        ![screenshot13](static/img/screenshot13.png)
 
     5. Get an error messages in case I have done something wrong or there is an issue with the database.
 
-    In case with an error the following error page will display with a link to go back to the home page.
+        In case with an error the following error page will display with a link to go back to the home page.
+        
+        ![screenshot15](static/img/screenshot15.png)
 
 - #### As an admin I want to be able:
 
     1. To access, edit and delete ALL spots and countries from the admin profile
 
-    The admin's profile page will also have all the countries listed that the admin can edit and delete in the same
-    way as with the spots.
+        The admin's profile page will also have all the countries listed that the admin can edit and delete in the same
+        way as with the spots.
+        ![screenshot16](static/img/screenshot16.png)
 
 
 ### Manual Testing
@@ -257,6 +286,7 @@ The following validators were used to make sure there were no syntax errors in t
     - Huawei Y60 2018
     - Huawei P30 Pro
     - Xiaomi mi 9 SE
+    - Iphone XS Max
 
 ### Known Bugs
 
