@@ -35,12 +35,12 @@ def search():
 def sign_up():
     if request.method == "POST":
         # checks if username already exists in database
-        existing_user = mongo.db.user.find_one(
+        existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
         if existing_user:
             flash("Username already in use")
-            return redirect(url_for("register"))
+            return redirect(url_for("sign_up"))
 
         register = {
             "username": request.form.get("username").lower(),
