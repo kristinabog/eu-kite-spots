@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block header %}
-    <!-- country title -->
+<!-- country title -->
         <div class="blue-container valign-wrapper">
             <div class="row center-align" id="row-home">
                 <div class="col">
@@ -10,8 +10,8 @@
                 </div>
             </div>
         </div>
-    <!-- country title -->
-    <!-- country info -->
+<!-- country title -->
+<!-- country info -->
         <div>
             <div class="row center-align cntry-info-bg">
                 <div class="col s12 m5">
@@ -20,7 +20,7 @@
                 <div class="col s12 m7">
                     <h4 class="wind-season">Wind Season</h4>
                     {% if country.country_wind %}
-                        <img src="{{ country.country_wind }}" id="wind-img">
+                        <img src="{{ country.country_wind }}" alt="Windseason Chart" id="wind-img">
                     {% else %}
                         {% if country.country_name == 'Spain' %}
                             <p>All year varied</p>
@@ -29,61 +29,61 @@
                 </div>
             </div>
         </div>
-     <!-- country info -->
+<!-- country info -->
 {% endblock %}
 {% block content %}
 <!-- kitespots per country -->
-<div class="container gen-container">
-    {% if spots %}
-            <div class="row center-align spot-row">
-                {% for spot in spots %}
-                    {% if country.country_name == spot.country_name %}
-                        <div class="col l4 spot-col">
-                            <!-- card with spot image and info -->
-                            <div class="card medium">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <img class="activator" src="{{ spot.spot_image }}">
-                                </div>
-                                <div class="card-content">
-                                    <a href="{{ url_for('spot', spot_id=spot._id) }}" class="card-title grey-text text-darken-4">{{ spot.spot_name }}</a>
-                                    <p>by {{ spot.created_by }}</p>
-                                    <div class="col s12 spot-info">
-                                        <p>
-                                            {{ spot.spot_region }}
-                                        </p>
-                                        <p>
-                                            {{ spot.spot_best_time }}
-                                        </p>
-                                        <p>
-                                            Experience: {{ spot.spot_level }}
-                                        </p>
-                                    </div>
-                                </div>
+    <div class="container gen-container">
+        {% if spots %}
+                <div class="row center-align spot-row">
+                    {% for spot in spots %}
+                        {% if country.country_name == spot.country_name %}
+                            <div class="col l4 spot-col">
                                 <!-- card with spot image and info -->
-                                <!-- card reveal with description -->
-                                <div class="card-reveal">
-                                    <span class="card-title grey-text text-darken-4">{{ spot.spot_name }}<i class="material-icons right">close</i></span>
-                                    <p>{{ spot.spot_description }}</p>
-                                    <!-- edit and delete buttons -->
-                                    {% if session.user|lower == spot.created_by|lower %}
-                                        <a href="{{ url_for('edit_spot', spot_id=spot._id) }}" class="btn teal waves-effect waves-light">
-                                            <span>Edit</span>
-                                        </a>
-                                        <a href="{{ url_for('delete_spot', spot_id=spot._id) }}" class="btn teal waves-effect waves-light">
-                                            <span>Delete</span>
-                                        </a>
-                                    {% endif %}
-                                    <!-- edit and delete buttons -->
+                                <div class="card medium">
+                                    <div class="card-image waves-effect waves-block waves-light">
+                                        <img class="activator" alt="Kitesurf spot image" src="{{ spot.spot_image }}">
+                                    </div>
+                                    <div class="card-content">
+                                        <a href="{{ url_for('spot', spot_id=spot._id) }}" class="card-title grey-text text-darken-4">{{ spot.spot_name }}</a>
+                                        <p>by {{ spot.created_by }}</p>
+                                        <div class="col s12 spot-info">
+                                            <p>
+                                                {{ spot.spot_region }}
+                                            </p>
+                                            <p>
+                                                {{ spot.spot_best_time }}
+                                            </p>
+                                            <p>
+                                                Experience: {{ spot.spot_level }}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- card with spot image and info -->
+                                    <!-- card reveal with description -->
+                                    <div class="card-reveal">
+                                        <span class="card-title grey-text text-darken-4">{{ spot.spot_name }}<i class="material-icons right">close</i></span>
+                                        <p>{{ spot.spot_description }}</p>
+                                        <!-- edit and delete buttons -->
+                                        {% if session.user|lower == spot.created_by|lower %}
+                                            <a href="{{ url_for('edit_spot', spot_id=spot._id) }}" class="btn teal waves-effect waves-light">
+                                                <span>Edit</span>
+                                            </a>
+                                            <a href="{{ url_for('delete_spot', spot_id=spot._id) }}" class="btn teal waves-effect waves-light">
+                                                <span>Delete</span>
+                                            </a>
+                                        {% endif %}
+                                        <!-- edit and delete buttons -->
+                                    </div>
+                                    <!-- card reveal with description -->
                                 </div>
-                                <!-- card reveal with description -->
                             </div>
-                        </div>
-                    {% endif %}
-                {% endfor %}
-            </div>
-    {% else %}
-        <h2 class="black-text no-results">No Results Found</h2>
-    {% endif %}      
-</div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+        {% else %}
+            <h2 class="black-text no-results">No Results Found</h2>
+        {% endif %}      
+    </div>
 <!-- kitespots per country -->
 {% endblock %}

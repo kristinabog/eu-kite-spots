@@ -1,133 +1,133 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container gen-container">
-    <div class="row">
-        <div class="col s12 m8 offset-m2">
-            <div class="card-panel">
-                <!-- Profile section -->
-                <div class="row">
-                    <hr class="heading-hr">
-                    <h3 class="center-align heading heading-bg">
-                        <span>Your Profile</span>
-                    </h3>
-                    <hr class="heading-hr">
-                </div>
-                <div class="row center-align">
-                    <p>
-                        Username: {{ session.user }}
-                    </p>
-                </div>
-                <!-- Profile section -->
-                <!-- Spots section -->
-                <div class="row">
-                    <hr class="heading-hr">
-                    <h3 class="center-align heading heading-bg">
-                        <span>Your Spots</span>
-                    </h3>
-                    <hr class="heading-hr">
-                </div>
-                <div class="row center-align">
-                    <a href="{{ url_for('add_spot') }}" class="btn teal waves-effect waves-light">
-                        <i class="fas fa-plus-square right"></i>Add Spot
-                    </a>
-                </div>
-                <div class="row center-align">
-                    <!-- Display spots of the user -->
-                    {% if spots %}
+    <div class="container gen-container">
+        <div class="row">
+            <div class="col s12 m8 offset-m2">
+                <div class="card-panel">
+                    <!-- Profile section -->
+                    <div class="row">
+                        <hr class="heading-hr">
+                        <h3 class="center-align heading heading-bg">
+                            <span>Your Profile</span>
+                        </h3>
+                        <hr class="heading-hr">
+                    </div>
+                    <div class="row center-align">
+                        <p>
+                            Username: {{ session.user }}
+                        </p>
+                    </div>
+                    <!-- Profile section -->
+                    <!-- Spots section -->
+                    <div class="row">
+                        <hr class="heading-hr">
+                        <h3 class="center-align heading heading-bg">
+                            <span>Your Spots</span>
+                        </h3>
+                        <hr class="heading-hr">
+                    </div>
+                    <div class="row center-align">
+                        <a href="{{ url_for('add_spot') }}" class="btn teal waves-effect waves-light">
+                            <i class="fas fa-plus-square right"></i>Add Spot
+                        </a>
+                    </div>
+                    <div class="row center-align">
+                        <!-- Display spots of the user -->
+                        {% if spots %}
+                            <ul class="collection">
+                                {% for spot in spots %}
+                                    {% if session.user|lower == spot.created_by|lower or session.user|lower == "admin" %}
+                                        <li class="collection-item avatar">
+                                            <img src="{{ spot.spot_image }}" alt="{{ spot.spot_name }}" class="circle">
+                                            <a href="{{ url_for('spot', spot_id=spot._id) }}" class="title">{{ spot.spot_name }}</a>
+                                            <div class="edit-remove-btns">
+                                                <a href="{{ url_for('edit_spot', spot_id=spot._id) }}"
+                                                    class="btn teal waves-effect waves-light edit-remove">
+                                                    <span>Edit</span>
+                                                </a>
+                                                <button data-target="{{ spot._id }}"
+                                                    class="btn teal waves-effect waves-light modal-trigger edit-remove">
+                                                    <span>Delete</span>
+                                                </button>
+                                            </div>
+                                            <!-- delete modal -->
+                                            <div id="{{ spot._id }}" class="modal">
+                                                <div class="modal-content">
+                                                    <p>Are you sure you want to delete this spot?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a href="{{ url_for('delete_spot', spot_id=spot._id) }}"
+                                                        class="waves-effect white-text waves-green btn-flat teal">Delete</a>
+                                                    <a href="#!"
+                                                        class="modal-close white-text waves-effect waves-green btn-flat teal">Cancel</a>
+                                                </div>
+                                            </div>
+                                            <!-- delete modal -->
+                                        </li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        {% else %}
+                        <p>You have no spots yet.</p>
+                        {% endif %}
+                        <!-- Display spots of the user -->
+                    </div>
+                    <!-- Spots section -->
+                    <!-- Countries section - only visible to admin-->
+                    {% if session.user|lower == "admin"|lower %}
+                    <div class="row">
+                        <hr class="heading-hr">
+                        <h3 class="center-align heading heading-bg">
+                            <span>Countries</span>
+                        </h3>
+                        <hr class="heading-hr">
+                    </div>
+                    <div class="row center-align">
+                        <a href="{{ url_for('add_country') }}" class="btn teal waves-effect waves-light">
+                            Add Country<i class="fas fa-plus-square right"></i>
+                        </a>
+                    </div>
+                    <!-- Collection of countries -->
+                    <div class="row center-align">
                         <ul class="collection">
-                            {% for spot in spots %}
-                                {% if session.user|lower == spot.created_by|lower or session.user|lower == "admin" %}
-                                    <li class="collection-item avatar">
-                                        <img src="{{ spot.spot_image }}" alt="{{ spot.spot_name }}" class="circle">
-                                        <a href="{{ url_for('spot', spot_id=spot._id) }}" class="title">{{ spot.spot_name }}</a>
-                                        <div class="edit-remove-btns">
-                                            <a href="{{ url_for('edit_spot', spot_id=spot._id) }}"
-                                                class="btn teal waves-effect waves-light edit-remove">
-                                                <span>Edit</span>
-                                            </a>
-                                            <button data-target="{{ spot._id }}"
-                                                class="btn teal waves-effect waves-light modal-trigger edit-remove">
-                                                <span>Delete</span>
-                                            </button>
-                                        </div>
-                                        <!-- delete modal -->
-                                        <div id="{{ spot._id }}" class="modal">
-                                            <div class="modal-content">
-                                                <p>Are you sure you want to delete this spot?</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <a href="{{ url_for('delete_spot', spot_id=spot._id) }}"
-                                                    class="waves-effect white-text waves-green btn-flat teal">Delete</a>
-                                                <a href="#!"
-                                                    class="modal-close white-text waves-effect waves-green btn-flat teal">Cancel</a>
-                                            </div>
-                                        </div>
-                                        <!-- delete modal -->
-                                    </li>
-                                {% endif %}
+                            {% for country in countries %}
+                            <li class="collection-item avatar">
+                                <img src="{{ country.country_img }}" alt="{{ country.country_name }}" class="circle">
+                                <a href="{{ url_for('country', country_id=country._id) }}" class="title">{{
+                                    country.country_name }}</a>
+                                <div class="edit-remove-btns">
+                                    <a href="{{ url_for('edit_country', country_id=country._id) }}"
+                                        class="btn teal waves-effect waves-light edit-remove">
+                                        <span>Edit</span>
+                                    </a>
+                                    <button data-target="{{ country._id }}"
+                                        class="btn teal waves-effect waves-light modal-trigger edit-remove">
+                                        <span>Delete</span>
+                                    </button>
+                                </div>
+                                <!-- delete modal -->
+                                <div id="{{ country._id }}" class="modal">
+                                    <div class="modal-content">
+                                        <p>Are you sure you want to delete this country?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a href="{{ url_for('delete_country', country_id=country._id) }}"
+                                            class="waves-effect white-text waves-green btn-flat teal">Delete</a>
+                                        <a href="#!"
+                                            class="modal-close white-text waves-effect waves-green btn-flat teal">Cancel</a>
+                                    </div>
+                                </div>
+                                <!-- delete modal -->
+                            </li>
                             {% endfor %}
                         </ul>
-                    {% else %}
-                    <p>You have no spots yet.</p>
+                    </div>
+                    <!-- Collection of countries -->
                     {% endif %}
-                    <!-- Display spots of the user -->
+                    <!-- Countries section - only visible to admin-->
                 </div>
-                <!-- Spots section -->
-                <!-- Countries section - only visible to admin-->
-                {% if session.user|lower == "admin"|lower %}
-                <div class="row">
-                    <hr class="heading-hr">
-                    <h3 class="center-align heading heading-bg">
-                        <span>Countries</span>
-                    </h3>
-                    <hr class="heading-hr">
-                </div>
-                <div class="row center-align">
-                    <a href="{{ url_for('add_country') }}" class="btn teal waves-effect waves-light">
-                        Add Country<i class="fas fa-plus-square right"></i>
-                    </a>
-                </div>
-                <!-- Collection of countries -->
-                <div class="row center-align">
-                    <ul class="collection">
-                        {% for country in countries %}
-                        <li class="collection-item avatar">
-                            <img src="{{ country.country_img }}" alt="{{ country.country_name }}" class="circle">
-                            <a href="{{ url_for('country', country_id=country._id) }}" class="title">{{
-                                country.country_name }}</a>
-                            <div class="edit-remove-btns">
-                                <a href="{{ url_for('edit_country', country_id=country._id) }}"
-                                    class="btn teal waves-effect waves-light edit-remove">
-                                    <span>Edit</span>
-                                </a>
-                                <button data-target="{{ country._id }}"
-                                    class="btn teal waves-effect waves-light modal-trigger edit-remove">
-                                    <span>Delete</span>
-                                </button>
-                            </div>
-                            <!-- delete modal -->
-                            <div id="{{ country._id }}" class="modal">
-                                <div class="modal-content">
-                                    <p>Are you sure you want to delete this country?</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <a href="{{ url_for('delete_country', country_id=country._id) }}"
-                                        class="waves-effect white-text waves-green btn-flat teal">Delete</a>
-                                    <a href="#!"
-                                        class="modal-close white-text waves-effect waves-green btn-flat teal">Cancel</a>
-                                </div>
-                            </div>
-                            <!-- delete modal -->
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                <!-- Collection of countries -->
-                {% endif %}
-                <!-- Countries section - only visible to admin-->
             </div>
         </div>
     </div>
-</div>
 
 {% endblock %}

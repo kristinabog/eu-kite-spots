@@ -1,86 +1,85 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container gen-container">
-    <div class="card-panel col s12 m8 l6">
-        <hr class="heading-hr">
-        <h3 class="heading center-align heading-bg">Edit Spot</h3>
-        <hr class="heading-hr hr-margin">
-        <form class="col s12 form-margin" method="POST" action="{{ url_for('edit_spot', spot_id=spot._id) }}">
-            <!-- country selection -->
-            <div class="row">
-                <div class="input-field col s12 l5">
-                    <i class="fas fa-globe-europe prefix teal-text"></i>
-                    <select id="country_name" name="country_name" class="validate" required>
-                        <option value="" disabled>Choose Country</option>
-                        {% for country in countries %}
-                            {% if country.country_name == spot.country_name %}
-                                <option value="{{ country.country_name }}" selected>{{ country.country_name }}</option>
-                            {% else %}
-                                <option value="{{ country.country_name }}">{{ country.country_name }}</option>
-                            {% endif %}
-                        {% endfor %}
-                    </select>
-                    <label for="country_name">Countries</label>
+    <div class="container gen-container">
+        <div class="card-panel col s12 m8 l6">
+            <hr class="heading-hr">
+            <h3 class="heading center-align heading-bg">Edit Spot</h3>
+            <hr class="heading-hr hr-margin">
+            <form class="col s12 form-margin" method="POST" action="{{ url_for('edit_spot', spot_id=spot._id) }}">
+                <!-- country selection -->
+                <div class="row">
+                    <div class="input-field col s12 l5">
+                        <i class="fas fa-globe-europe prefix teal-text"></i>
+                        <select id="country_name" name="country_name" class="validate" required>
+                            <option value="" disabled>Choose Country</option>
+                            {% for country in countries %}
+                                {% if country.country_name == spot.country_name %}
+                                    <option value="{{ country.country_name }}" selected>{{ country.country_name }}</option>
+                                {% else %}
+                                    <option value="{{ country.country_name }}">{{ country.country_name }}</option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                        <label for="country_name">Countries</label>
+                    </div>
                 </div>
-            </div>
-            <!-- spot name and region-->
-            <div class="row">
-                <div class="input-field col s12 l6">
-                    <input id="spot_name" name="spot_name" minlength="4" maxlength="50" 
-                    value="{{ spot.spot_name }}" type="text" class="validate" required>
-                    <label for="spot_name">Name</label>
-                    <span class="helper-text" data-error="Required">Name of Beach, Bay, Surf club, etc.</span>
+                <!-- spot name and region-->
+                <div class="row">
+                    <div class="input-field col s12 l6">
+                        <input id="spot_name" name="spot_name" minlength="4" maxlength="50" 
+                        value="{{ spot.spot_name }}" type="text" class="validate" required>
+                        <label for="spot_name">Name</label>
+                        <span class="helper-text" data-error="Required">Name of Beach, Bay, Surf club, etc.</span>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input id="spot_region" name="spot_region" minlength="4" maxlength="50" 
+                        value="{{ spot.spot_region }}" type="text" class="validate" required>
+                        <label for="spot_region">Region</label>
+                        <span class="helper-text" data-error="Required">In which region, area, island</span>
+                    </div>
                 </div>
-                <div class="input-field col s12 l6">
-                    <input id="spot_region" name="spot_region" minlength="4" maxlength="50" 
-                    value="{{ spot.spot_region }}" type="text" class="validate" required>
-                    <label for="spot_region">Region</label>
-                    <span class="helper-text" data-error="Required">In which region, area, island</span>
+                <!-- spot level and best time -->
+                <div class="row">
+                    <div class="input-field col s12 l6">
+                        <input id="spot_best_time" name="spot_best_time" minlength="5" maxlength="50" 
+                            value="{{ spot.spot_best_time }}" type="text" class="validate" required>
+                        <label for="spot_best_time">Best time</label>
+                        <span class="helper-text" data-error="Required">Best month(s) for kitesurfing</span>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input id="spot_level" name="spot_level" maxlength="50" 
+                            value="{{ spot.spot_level }}" type="text" class="validate" required>
+                        <label for="spot_level">Level of expertise</label>
+                        <span class="helper-text" data-error="Required">The spot is suitable for a: beginner, intermediate, expert or all</span>
+                    </div>
                 </div>
-            </div>
-            <!-- spot level and best time -->
-            <div class="row">
-                <div class="input-field col s12 l6">
-                    <input id="spot_best_time" name="spot_best_time" minlength="5" maxlength="50" 
-                        value="{{ spot.spot_best_time }}" type="text" class="validate" required>
-                    <label for="spot_best_time">Best time</label>
-                    <span class="helper-text" data-error="Required">Best month(s) for kitesurfing</span>
+                <!-- image and location -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="spot_image" name="spot_image" type="text" 
+                            class="validate" value="{{ spot.spot_image }}" required>
+                        <label for="spot_image">Image URL</label>
+                        <span class="helper-text" data-error="Required">Valid image URL</span>
+                    </div>
                 </div>
-                <div class="input-field col s12 l6">
-                    <input id="spot_level" name="spot_level" maxlength="50" 
-                        value="{{ spot.spot_level }}" type="text" class="validate" required>
-                    <label for="spot_level">Level of expertise</label>
-                    <span class="helper-text" data-error="Required">The spot is suitable for a: beginner, intermediate, expert or all</span>
+                <!-- description -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="spot_description" name="spot_description"
+                        minlength="5" maxlength="200" class="materialize-textarea validate" required>{{ spot.spot_description }}</textarea>
+                        <label for="spot_description">Description</label>
+                    </div>
                 </div>
-            </div>
-            <!-- image and location -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <input id="spot_image" name="spot_image" type="text" 
-                        class="validate" value="{{ spot.spot_image }}" required>
-                    <label for="spot_image">Image URL</label>
-                    <span class="helper-text" data-error="Required">Valid image URL</span>
+                <!-- submit button-->
+                <div class="row center-align">
+                    <button type="submit" class="btn teal waves-effect waves-light">
+                        <span>Edit</span>
+                    </button>
+                    <a href="{{ url_for('profile', username=session.user) }}" class="btn teal waves-effect waves-light">
+                        <span>Cancel</span>
+                    </a>
                 </div>
-            </div>
-            <!-- description -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <textarea id="spot_description" name="spot_description"
-                    minlength="5" maxlength="200" class="materialize-textarea validate" required>{{ spot.spot_description }}</textarea>
-                    <label for="spot_description">Description</label>
-                </div>
-            </div>
-            <!-- submit button-->
-            <div class="row center-align">
-                <button type="submit" class="btn teal waves-effect waves-light">
-                    <span>Edit</span>
-                </button>
-                <a href="{{ url_for('profile', username=session.user) }}" class="btn teal waves-effect waves-light">
-                    <span>Cancel</span>
-                </a>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
-</div>
-
 {% endblock %}

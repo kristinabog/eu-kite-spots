@@ -1,46 +1,45 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container gen-container">
-    <div class="card-panel col s12 m8 l6">
-        <hr class="heading-hr">
-        <h3 class="heading center-align heading-bg">Add Country</h3>
-        <hr class="heading-hr hr-margin">
-        <form class="col s12 form-margin" method="POST" action="{{ url_for('add_country') }}">
-            <!-- country name and image -->
-            <div class="row">
-                <div class="input-field col s12 l6">
-                    <i class="fas fa-globe-europe prefix teal-text"></i>
-                    <input id="country_name" name="country_name" 
-                    minlength="4" maxlength="50" type="text" class="validate" required>
-                    <label for="country_name">Name</label>
+    <div class="container gen-container">
+        <div class="card-panel col s12 m8 l6">
+            <hr class="heading-hr">
+            <h3 class="heading center-align heading-bg">Add Country</h3>
+            <hr class="heading-hr hr-margin">
+            <form class="col s12 form-margin" method="POST" action="{{ url_for('add_country') }}">
+                <!-- country name and image -->
+                <div class="row">
+                    <div class="input-field col s12 l6">
+                        <i class="fas fa-globe-europe prefix teal-text"></i>
+                        <input id="country_name" name="country_name" 
+                        minlength="4" maxlength="50" type="text" class="validate" required>
+                        <label for="country_name">Name</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input id="country_img" name="country_img" type="text" class="validate" required>
+                        <label for="country_img">Image URL</label>
+                        <span class="helper-text" data-error="Required">Valid image URL</span>
+                    </div>
                 </div>
-                <div class="input-field col s12 l6">
-                    <input id="country_img" name="country_img" type="text" class="validate" required>
-                    <label for="country_img">Image URL</label>
-                    <span class="helper-text" data-error="Required">Valid image URL</span>
+                <!-- description and wind chart-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="country_description" name="country_description"
+                        minlength="5" maxlength="330" class="materialize-textarea validate" required></textarea>
+                        <label for="country_description">Description</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <textarea id="country_wind" name="country_wind"
+                        minlength="5" class="materialize-textarea validate" required></textarea>
+                        <label for="country_wind">Wind diagram</label>
+                    </div>
                 </div>
-            </div>
-            <!-- description -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <textarea id="country_description" name="country_description"
-                    minlength="5" maxlength="330" class="materialize-textarea validate" required></textarea>
-                    <label for="country_description">Description</label>
+                <!-- submit button-->
+                <div class="row center-align">
+                    <button type="submit" class="btn teal waves-effect waves-light">
+                        <span>Submit</span>
+                    </button>
                 </div>
-                <div class="input-field col s12">
-                    <textarea id="country_wind" name="country_wind"
-                    minlength="5" class="materialize-textarea validate" required></textarea>
-                    <label for="country_wind">Wind diagram</label>
-                </div>
-            </div>
-            <!-- submit button-->
-            <div class="row center-align">
-                <button type="submit" class="btn teal waves-effect waves-light">
-                    <span>Submit</span>
-                </button>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
-</div>
-
 {% endblock %}

@@ -38,7 +38,7 @@
                             <!-- Card with spot image and info -->
                             <div class="card medium">
                                 <div class="card-image waves-effect waves-block waves-light">
-                                    <img class="activator" src="{{ spot.spot_image }}">
+                                    <img class="activator" src="{{ spot.spot_image }}" alt="Kitesurf spot image">
                                 </div>
                                 <div class="card-content">
                                     <a href="{{ url_for('spot', spot_id=spot._id) }}" class="card-title grey-text text-darken-4">{{ spot.spot_name }}</a>
