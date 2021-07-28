@@ -93,7 +93,7 @@ The home page has a gif with someone kitesurfing, so visitors can see the sport 
 Note:
 Original plan was to implement a google maps API that will show all spots on a map on the spots template and
 on the country pages displaying all the spots per country. But because of a lot of
-unsuccesfull attempts trying to find solutions on how to implement google masp API and connect it to
+unsuccesfull attempts trying to find solutions on how to implement google maps API and connect it to
 the mongoDB Database, I decided to leave this out for this project.
 
 ### Existing Features
@@ -170,6 +170,11 @@ MongoDB Atlas was used for storing data
 ### Validators
 
 The following validators were used to make sure there were no syntax errors in the project.
+[W3C HTML Validator](https://validator.w3.org/#validate_by_input) Passed without errors
+[W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) Passed without errors
+[JSHint](https://jshint.com/) Passed without errors
+[PEP8](http://pep8online.com/) Passed without errors
+
 
 ### Testing User Stories from User Experience (UX) Section
 
