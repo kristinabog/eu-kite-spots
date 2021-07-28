@@ -43,7 +43,7 @@ to find on the internet. With this website kitesurfers, beginner to expert, can 
 
 - As an admin I want to be able:
 
-    to access, edit and delete ALL spots and countries from the admin profile
+    to access, edit and delete spots and countries from the admin profile
 
 
 
@@ -256,7 +256,7 @@ The following validators were used to make sure there were no syntax errors in t
 
 - #### As an admin I want to be able:
 
-    1. To access, edit and delete ALL spots and countries from the admin profile
+    1. To access, edit and delete spots and countries from the admin profile
 
         The admin's profile page will also have all the countries listed that the admin can edit and delete in the same
         way as with the spots.
@@ -274,12 +274,29 @@ The following validators were used to make sure there were no syntax errors in t
 | `Countries.html` |||
 | Click on one of the country images | Redirects you to individual country page | Pass |
 | `Log_in.html` |||
-| Fill in existing username and password | Logs in and shows the profile | Pass |
+| Fill in existing username and password | Logs in and shows the profile with flash message "Hello again, (username)" | Pass |
 | Fill in non existing username and password | Shows flash message "Incorrect username and/or Password" | Pass |
 | `Sign_up.html` |||
 | Fill in username and password with min. 5 characters | Logs in and shows the profile with flash message "Account created" | Pass |
 | Fill in username and passwword with less than 5 characters | Will show required under input field with info why | Pass |
-
+| Fill in existing username | Will show flash message "Username already in use | Pass |
+| `profile.html` |||
+| View profile page | View list of spots made by current logged in user | Pass |
+| Click on button "Add spot" | Redirects you to page to add spot | Pass |
+| Click on name of spot in list | Redirects to individual spot page | Pass |
+| Click on edit button next to name of spot | Redirects you to edit form of spot | Pass |
+| Click on Delete button | Modal shows up if you want to delete or not | Pass |
+| Click on delete in the delete modal | Deletes spot | Pass |
+| Click on cancel in the delete modal | Modal disappears and nothing happened | Pass |
+| Admin only sees section to edit and delete Countries | Same functionality as list of spots | Pass |
+| Click on Log out in nav bar | You log out and redirected to log in page | Pass |
+| `add_spot.html add_country` |||
+| Not filling something in | The input line turns red and required appears | Pass |
+| Click on Submit | Spot or Country is added and redirected to spots.html or profile.html | Pass |
+| `edit_spot.html edit_country` |||
+| Entering the page | Shows all database elements in the input fields | Pass |
+| Click on Edit button | Spot is edited and shows flash msg "Spot successfully updated" | Pass |
+| Click on Cancel button | Nothing changes and redirects to profile | Pass |
 
 
 ### Further Testing
