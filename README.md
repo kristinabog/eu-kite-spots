@@ -33,6 +33,7 @@ to find on the internet. With this website kitesurfers, beginner to expert, can 
     6. Find more info about a kitespot when I click on it in the list of kitespots
     7. Find info about the country and their windseason.
 
+
 - As a member I want to:
 
     1. Be able to add my own kitesurf spots.
@@ -40,6 +41,7 @@ to find on the internet. With this website kitesurfers, beginner to expert, can 
     3. Edit and delete my own kitesurf spots.
     4. Get feedback for adding, editing, logging in and logging out.
     5. Get an error messages in case I have done something wrong or there is an issue with the database.
+
 
 - As an admin I want to be able:
 
@@ -83,10 +85,11 @@ The home page has a gif with someone kitesurfing, so visitors can see the sport 
 ### Skeleton
 
 - Wireframe: 
-    - Home page
-    - log in and sign up page
-    - Spots page
-    - Countries page
+    - [Home page](static/img/wireframe-home.pdf)
+    - [log in/Sign up  + Profile page](static/img/wireframe-login.pdf)
+    - [Spots pages](static/img/wireframe-spots.pdf)
+    - [Countries pages](static/img/wireframe-country.pdf)
+    - [Website Diagram](static/img/website-diagram.pdf)
 
 ## Features
 
@@ -97,30 +100,35 @@ unsuccesfull attempts trying to find solutions on how to implement google maps A
 the mongoDB Database, I decided to leave this out for this project.
 
 ### Existing Features
-    - Log in
-    - Register for an account
-    - Search bar to look up spots by name and region with reset button. If nothing found will return 'No results'
-    - Adding, editing and removing of spots in the profile only by registered users
-    - Adding, editing and/or removing countries only by admin
-    - Flash messages after every login, logout, add, edit and removal
-    - Profile page displays username
-    - Spot and countries have their own page
-    - Input field validation in the forms
-    - Responsive on all devices
+- Log in
+- Register for an account
+- Search bar to look up spots by name and region with reset button. If nothing found will return 'No results'
+- Adding, editing and removing of spots in the profile only by registered users
+- Adding, editing and/or removing countries only by admin
+- Flash messages after every login, logout, add, edit and removal
+- Profile page displays username
+- Spot and countries have their own page
+- Input field validation in the forms
+- Responsive on all devices
     
 ### Future Features
-    - Google maps API for all the spots to be displaying on
-    - Password reset
-    - More profile information to add and ability to edit them
-    - SSL certificate
-    - Registration with email or through Google
-    - Page loading animation
-    - Pagination on the spots page
-    - Sort spots by region, experience and kitesurf season
+- Google maps API for all the spots to be displaying on
+- Password reset
+- More profile information to add and ability to edit them
+- SSL certificate
+- Registration with email or through Google
+- Page loading animation
+- Pagination on the spots page, and on profile page so not more than 4 spots are shown
+- Sort spots by region, experience and kitesurf season
     
 
 ## Information Architecture
+
 MongoDB Atlas was used for storing data
+
+Database diagram:
+
+![Database diagram]()
 
 ## Technologies Used
 
@@ -170,11 +178,21 @@ MongoDB Atlas was used for storing data
 ### Validators
 
 The following validators were used to make sure there were no syntax errors in the project.
+
 [W3C HTML Validator](https://validator.w3.org/#validate_by_input) Passed without errors
+
 [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) Passed without errors
+
 [JSHint](https://jshint.com/) Passed without errors
+
 [PEP8](http://pep8online.com/) Passed without errors
 
+### Lighthouse testing
+
+Home page does not score well with lighthouse because of the huge gif that takes loading time.
+The gif has been resized and tinified as much as possible, but also not too much to keep quality of image.
+A lot of matereliaze elements trigger warnings in lighthouse as well.
+Other pages always score 80-90+.
 
 ### Testing User Stories from User Experience (UX) Section
 
@@ -295,10 +313,10 @@ The following validators were used to make sure there were no syntax errors in t
 | Click on cancel in the delete modal | Modal disappears and nothing happened | Pass |
 | Admin only sees section to edit and delete Countries | Same functionality as list of spots | Pass |
 | Click on Log out in nav bar | You log out and redirected to log in page | Pass |
-| `add_spot.html add_country` |||
+| `add_spot.html add_country.html` |||
 | Not filling something in | The input line turns red and required appears | Pass |
 | Click on Submit | Spot or Country is added and redirected to spots.html or profile.html | Pass |
-| `edit_spot.html edit_country` |||
+| `edit_spot.html edit_country.html` |||
 | Entering the page | Shows all database elements in the input fields | Pass |
 | Click on Edit button | Spot is edited and shows flash msg "Spot successfully updated" | Pass |
 | Click on Cancel button | Nothing changes and redirects to profile | Pass |
@@ -329,7 +347,95 @@ The following validators were used to make sure there were no syntax errors in t
 
 ### Known Bugs
 
+- Tried to give the callout container and columns on home.html all 1 fade in class. But the fade in effect then dissappears.
+So I pasted the fade in css as an id for the 2 columns and directly in the callout-container class.
+
+- On profile.html logged in as Admin it does not show all of the spots of everyone, only the ones made by admin.
+Even though the following code is added: 
+    {% if session.user|lower == spot.created_by|lower or session.user|lower == "admin" %}
+
 ## Deployment
+
+### 1. Making a Local Clone
+
+1. Log in to [GitHub](https://github.com/) and navigate yourself to the repository.
+2. Click the 'Code' dropdown above the file list.
+3. Copy the URL for the repository.
+4. Open Git Bash
+5. Change the current working directory to where you want the cloned directory.
+6. Type git clone in the CLI and then paste the URL you copied earlier.
+   It should look like this:
+```
+$ git clone https://github.com/kristinabog/greek-beaches-memory-game
+```
+7. Press enter to create clone
+
+### 2. Connect to MongoDB
+
+Make a free account on [MongoDB](https://www.mongodb.com/) an recreate the database
+
+In your development environment, upgrade pip if needed
+```
+pip install --upgrade pip
+```
+Install all dependencies to enable the installation of the packages required for this project 
+```
+$ pip3 install -r requirements.txt
+```
+Create the following files in the root directory:
+
+- env.py
+- .gitignore
+
+Oopen the .gitignore file and add:
+
+- env.py
+- __pycache__/
+
+These files will not be pushed to GitHub
+
+Open the env.py file and add the following:
+```
+import os
+
+os.environ.setdefault("IP", "0.0.0.0")
+os.environ.setdefault("PORT", "5000")
+os.environ.setdefault("SECRET_KEY", "<secret key>")
+os.environ.setdefault("MONGO_URI", "<from mongo>")
+os.environ.setdefault("MONGO_DBNAME", "<database name>")
+```
+
+The app can crun locally typing the following in the terminal:
+```
+python3 app.py
+```
+
+### Deploy to Heroku
+
+Heroku requires the following files to run properly:
+- requirements.txt
+- Procfile
+
+Heroku was the chosen deployment platform for this project. 
+These are the steps to deploy the local app to Heroku:
+
+- In Heroku, create an app with an unique name
+- Choose region, click 'Create App'
+- Select GitHub as Deployment method. Make sure your GitHub username is displayed
+- Type in repo name and click 'search' and then 'connect'
+
+How to find the variables to define in env.py 
+
+- Click on 'Settings' Tab
+- Click on ‘Reveal Config Vars’
+
+Deploying
+
+- Click on the Deploy tab
+- Click ‘enable automatic deploys’
+- Click ‘deploy branch’ below. Make sure the master branch is selected
+- When deployment is succesfull you will see the following message: ‘Your app was successfully deployed’
+
 
 ## Credits
 
@@ -376,4 +482,12 @@ Spots:
 - [Description Bolonia](https://wakeupstoked.com/kitesurf-tarifa-spain/)
 - [Description Mikri Vigla](https://theculturetrip.com/europe/greece/articles/where-to-go-windsurfing-and-kitesurfing-in-naxos/)
 - [Description Cadabelo](https://blog.bstoked.net/locations/top-5-kitesurfing-spots-in-portugal-new-in-2018/)
+
+### Acknowledgements
+
+- My Mentor for the helpful feedback.
+
+- A very big thank you to the Tutor support who helped me solve bugs.
+
+- A thank you to family and friends that took the time to test the website.
 
