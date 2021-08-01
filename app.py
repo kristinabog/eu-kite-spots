@@ -92,7 +92,7 @@ def profile(username):
         {"username": session["user"]})["username"]
     spots = []
     if session["user"]:
-        spots = list(mongo.db.spots.find({'created_by': username}))
+        spots = list(mongo.db.spots.find())
         countries = list(mongo.db.countries.find().sort("country_name", 1))
         return render_template(
             "profile.html", username=username,
@@ -237,4 +237,4 @@ def page_not_found(e):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)
