@@ -54,13 +54,13 @@ The goal of this website is so kitesurfers easily can find a website where they 
 
 ### Scope
 After looking around on the internet, you can find websites about kitesurfing in general and with popular spots around the world but nowhere
-can you find a website where you can add your own and share it with other skitesurfers. This is what this website will specialize in. This way also experienced kitesurfers can share their
+can you find a website where you can add your own and share it with other kitesurfers. This is what this website will specialize in. This way also experienced kitesurfers can share their
 less touristic known spots to other kitesurfers around the world.
 
 ### Structure
 Visitors are welcomed with an image to amaze them and see a kitesurfer in action. This give them the immediate idea what the website is about.
 As they scroll down they will see an actual description of what the website is about and what kitesurfing is.
-The log in and sign up page will have a similar clean look. There is 1 page where you can browse through all the kitesurf spots by name, region or country. When you click on a spot, you will be redirected to an individual page of that spot with all the info
+The log in and sign up page will have a similar clean look. There is 1 page where you can browse through all the kitesurf spots by name, region. When you click on a spot, you will be redirected to an individual page of that spot with all the info
 There is also a page where you can look up spots by country.
 When you click on one of the countries it will take you to a page with a brief description of the country and a all kitesurf spots in that country. 
 When you sign up as a member you will be able to have a profile and a button in the navbar to add a kitesurf spot.
@@ -283,6 +283,7 @@ Other pages always score 80-90+.
 
         The admin's profile page will also have all the countries listed that the admin can edit and delete in the same
         way as with the spots.
+        
         ![screenshot16](static/img/screenshot16.png)
 
 
@@ -302,7 +303,7 @@ Other pages always score 80-90+.
 | `Sign_up.html` |||
 | Fill in username and password with min. 5 characters | Logs in and shows the profile with flash message "Account created" | Pass |
 | Fill in username and passwword with less than 5 characters | Will show required under input field with info why | Pass |
-| Fill in existing username | Will show flash message "Username already in use | Pass |
+| Fill in existing username | Will show flash message "Username already in use" | Pass |
 | `profile.html` |||
 | View profile page | View list of spots made by current logged in user | Pass |
 | Click on button "Add spot" | Redirects you to page to add spot | Pass |
