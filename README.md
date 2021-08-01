@@ -6,7 +6,7 @@ to find on the internet. With this website kitesurfers, beginner to expert, can 
 
 [View Live Website](https://eu-kite-spots.herokuapp.com/)
 
-![Responsiveness]()
+![Responsiveness](static/img/responsive-ms3.png)
 
 ## Table of Content
 
@@ -128,7 +128,7 @@ MongoDB Atlas was used for storing data
 
 Database diagram:
 
-![Database diagram]()
+![Database diagram](static/img/db-diagram.png)
 
 ## Technologies Used
 
