@@ -325,7 +325,7 @@ Other pages always score 80-90+.
 
 ### Further Testing
 
--   The Website was tested on Google Chrome, Microsoft Edge and Safari browsers.
+-   The Website was tested on Google Chrome, Microsoft Edge and Firefox.
 -   The website was tested on all device sizes that are viewable in DevTools.
 -   Family members and friends were asked to test the website on their devices.
 -   The website was viewed on a variety of devices:
@@ -350,10 +350,6 @@ Other pages always score 80-90+.
 
 - Tried to give the callout container and columns on home.html all 1 fade in class. But the fade in effect then dissappears.
 So I pasted the fade in css as an id for the 2 columns and directly in the callout-container class.
-
-- On profile.html logged in as Admin it does not show all of the spots of everyone, only the ones made by admin.
-Even though the following code is added: 
-    {% if session.user|lower == spot.created_by|lower or session.user|lower == "admin" %}
 
 ## Deployment
 
