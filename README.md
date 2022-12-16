@@ -4,7 +4,8 @@ EU Kitespots is a website where users can look up kitesurf spots around Europe. 
 share their favourite kitesurf spots in Europe. The best kitesurf spots are often secret or difficult
 to find on the internet. With this website kitesurfers, beginner to expert, can share their spots.
 
-[View Live Website](https://eu-kite-spots.herokuapp.com/)
+[View Live Website](https://eu-kite-spots.onrender.com) - Update 12/2022: redeployed on [Render](https://render.com
+)
 
 ![Responsiveness](static/img/responsive-ms3.png)
 
